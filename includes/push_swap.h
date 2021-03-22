@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/21 11:15:26 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/22 15:03:23 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,25 @@ typedef struct	s_ss
 	int			min_found;
 	int			swap_b;
 }				t_ss;
+
+/*
+** HUNTER ALGO (My Sort Algorithm)
+*/
+
+typedef struct	s_poids
+{
+	int			nbr;
+	UINT		poids;
+}				t_poids;
+
+typedef struct	s_hunter
+{
+	t_poids		*a;
+	UINT		size_a;
+	t_poids		*b;
+	UINT		size_b;
+}				t_hunter;
+
+int	hunter_algo(t_val *val);
 
 #endif
