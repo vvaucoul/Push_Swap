@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 15:03:23 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/22 16:27:37 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,18 @@ typedef struct	s_ss
 /*
 ** HUNTER ALGO (My Sort Algorithm)
 */
+
+typedef struct	s_hchunk
+{
+	int			value;
+	t_bool		result;
+}				t_hckunk;
+
+typedef struct	s_chunk
+{
+	int			**range;
+	UINT		nb_chunks;
+}				t_chunk;
 
 typedef struct	s_poids
 {

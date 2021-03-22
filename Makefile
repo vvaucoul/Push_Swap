@@ -6,7 +6,7 @@
 #    By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/03 22:02:22 by vvaucoul          #+#    #+#              #
-#    Updated: 2021/03/22 15:02:08 by vvaucoul         ###   ########.fr        #
+#    Updated: 2021/03/22 15:51:11 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAMER	= random_nbr
 
 NAMES = $(NAMEC) $(NAMEPS)
 
-CCO		= gcc -g3 -Wall -Werror -Wextra -I./includes -o
+CCO		= gcc -g3 -o #-Wall -Werror -Wextra -I./includes -o
 
 SRCC	=		srcs/core/solved.c \
 				srcs/core/debug/print_heap.c \
