@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/03 22:12:18 by vvaucoul          #+#    #+#             */
+/*   Updated: 2021/03/21 11:29:53 by vvaucoul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../../includes/core.h"
+
+int	sa(t_val *val)
+{
+	int tmp;
+
+	if (val->size_a < 2)
+		return (1);
+	tmp = val->a[1];
+	val->a[1] = val->a[0];
+	val->a[0] = tmp;
+	print_output(val, "sa");
+	return (0);
+}
+
+int	sb(t_val *val)
+{
+	int tmp;
+
+	if (val->size_b < 2)
+		return (1);
+	tmp = val->b[1];
+	val->b[1] = val->b[0];
+	val->b[0] = tmp;
+	print_output(val, "sb");
+	return (0);
+}
+
+int	ss(t_val *val)
+{
+	sa(val);
+	sb(val);
+	return (0);
+}

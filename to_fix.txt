@@ -1,0 +1,7 @@
+algo
+
+si on peut juste rra (1 2 3 4 5 0)
+doit se faire en un coups
+
+fix 500 nbr en - de 5000 coups
+fix 100 nbr en - de 700 coups
