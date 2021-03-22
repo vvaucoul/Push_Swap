@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 22:11:04 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 16:48:49 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/22 18:28:28 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # include <sys/ioctl.h>
 # include <termcap.h>
 
-# define DEBUG_TIME_TO_WAIT 10000
+# define DEBUG_TIME_TO_WAIT 100000
 # define UINT size_t
 
 typedef	int	t_bool;

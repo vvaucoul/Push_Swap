@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 16:27:37 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/22 20:58:36 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int				solve_heap(t_val *val);
 */
 
 int				case_three(t_val *val);
+int				case_three_b(t_val *val);
 int				algo_02(t_val *val);
 int				algo_03(t_val *val);
 int				swap_sort(t_val *val);
@@ -92,33 +93,15 @@ typedef struct	s_ss
 /*
 ** HUNTER ALGO (My Sort Algorithm)
 */
-
-typedef struct	s_hchunk
-{
-	int			value;
-	t_bool		result;
-}				t_hckunk;
-
-typedef struct	s_chunk
-{
-	int			**range;
-	UINT		nb_chunks;
-}				t_chunk;
-
-typedef struct	s_poids
-{
-	int			nbr;
-	UINT		poids;
-}				t_poids;
-
 typedef struct	s_hunter
 {
-	t_poids		*a;
-	UINT		size_a;
-	t_poids		*b;
-	UINT		size_b;
+	int			mid;
+	int			mid_b;
+	int			count_b;
+	int			count_a;
+	int			flag;
 }				t_hunter;
 
-int	hunter_algo(t_val *val);
+int	hunter_algo(t_val *val, int size);
 
 #endif

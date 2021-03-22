@@ -6,11 +6,21 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 14:49:06 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 16:48:41 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/22 21:02:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../../includes/push_swap.h"
+
+
+/*
+** Hunter Sort
+**
+** [1] Push les 3 premiers nombres vers B
+** [2] Case 3 heap B
+** [3] tant que size a > 3
+** [4] Case 3 Heap A
+*/
 
 /*
 ** DEBUG
@@ -18,323 +28,210 @@
 
 # include <stdio.h>
 
-static void print_hunter(t_hunter *hunter, int print_a)
-{
-	int i;
-	int mi;
 
-	i = 0;
-	mi = print_a ? hunter->size_a : hunter->size_b;
-	while (i < mi)
-	{
-		printf("- [%d] : [%d] | POIDS [%ld]\n", i, print_a ? hunter->a[i].nbr : hunter->b[i].nbr, print_a ? hunter->a[i].poids : hunter->b[i].poids);
-		++i;
-	}
-	printf(" - Hunter %s = [%ld]\n", print_a ? "HEAP A" : "HEAP B", print_a ? hunter->size_a : hunter->size_b);
-}
+static int hunter_sort_hb(t_val *val, int size);
 
 /*
 ** UTILS
 */
 
-static t_poids	get_nbr_poids(int *h, UINT size, int value)
+static int get_middle_stack(int *h, UINT size, int div)
 {
-	t_poids	poids;
-	int		*sorted_tab;
-	int		i;
+	int *tab;
+	int middle;
 
-	i = 0;
-	sorted_tab = ft_select_sort(h, size);
-	while (sorted_tab[i] != value && (UINT)i < size)
-		++i;
-	free(sorted_tab);
-	poids.nbr = value;
-	poids.poids = i;
-	return (poids);
+	tab = ft_select_sort(h, size);
+	middle = tab[size / div];
+	free(tab);
+	printf("middle = [%d]\n", middle);
+	return (middle);
 }
 
-static int	init_hunter_sort(t_val *val, t_hunter *hunter)
+// int	check_mid_low(t_list *stack, int mid)
+static int heap_is_under_median(int *h, int size, int middle)
 {
-	UINT	i;
+	int i;
 
-	if (!(hunter->a = malloc(sizeof(t_poids) * (val->size_a + 1))))
-		return (-1);
-	if (!(hunter->b = malloc(sizeof(t_poids) * (val->size_b + 1))))
-		return (-1);
 	i = 0;
-	while (i < val->size_a)
+	while (i < size)
 	{
-		hunter->a[i] = get_nbr_poids(val->a, val->size_a, val->a[i]);
+		if (h[i] < middle)
+			return (1);
 		++i;
 	}
-	hunter->size_a = val->size_a;
-	i = 0;
-	while (i < val->size_b)
-	{
-		hunter->b[i] = get_nbr_poids(val->b, val->size_b, val->b[i]);
-		++i;
-	}
-	hunter->size_b = val->size_b;
 	return (0);
 }
 
-static int free_hunter(t_hunter *hunter)
+// int	check_mid_up(t_list *stack, int mid)
+static int heap_is_upper_median(int *h, int size, int middle)
 {
-	free(hunter->a);
-	free(hunter->b);
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (h[i] >= middle)
+			return (1);
+		++i;
+	}
 	return (0);
+}
+
+//int	check_rev_sort(t_list *stack, int size)
+static int reverse_sort(int *h, UINT size)
+{
+	int i;
+
+	i = 0;
+	while (i < size - 1)
+	{
+		if (h[i + 1] > h[i])
+			return (0);
+		++i;
+	}
+	return (1);
+}
+
+// int	stack_is_rev_sorted(t_list *stack_a)
+static int heap_is_reverse_sorted(int *h, UINT size)
+{
+	int i;
+
+	i = 0;
+	while (i < size - 1)
+	{
+		if (h[i + 1] > h[i])
+			return (0);
+		++i;
+	}
+	return (1);
 }
 
 /*
-** Sort Hunter !
+** SORT FUNCTIONS
 */
 
-static int get_nearest_rounded_value(int nb)
+static int hunter_sort_ha_helper(t_val *val, int size, t_hunter *hunter)
 {
-	int result;
-	int is_already_rounded;
-	UINT nb_div;
-	t_bool is_neg;
-
-	if (nb < 0)
-	{
-		nb = -nb;
-		is_neg = TRUE;
-	}
-	nb_div = 1;
-	//printf("### Nearest rounded value ###\n");
-	if (nb % 10)
-		is_already_rounded = FALSE;
-	else
-		is_already_rounded = TRUE;
-	//printf("is is_already_rounded = [%d]\n", is_already_rounded);
-	while (nb > 9)
-	{
-		nb /= 10;
-		nb_div *= 10;
-	}
-	//printf("NB Div = [%ld] | nb = [%d]\n", nb_div, nb);
-	result = (nb * nb_div) + (is_already_rounded == FALSE ? 10 : 0);
-	//printf("Result = [%d]\n", result);
-	return (result * (is_neg ? -1 : 1));
-}
-
-static t_chunk init_chunks(t_val *val)
-{
-	int start_value;
 	int i;
-	int j;
-	int min;
-	int max;
-	t_chunk chunk;
 
-	min = get_min_value(val->a, val->size_a);
-	start_value = get_nearest_rounded_value(min);
- 	min = min < 0 ? -min : min;
-	max = get_nearest_rounded_value(get_max_value(val->a, val->size_a));
-	chunk.nb_chunks = (min + max) / 20;
-	if (val->size_a % (min + max) != 0)
-		++chunk.nb_chunks;
-	if (chunk.nb_chunks <= 0)
-		chunk.nb_chunks = 1;
-	chunk.range = malloc(sizeof(int) * val->size_a + 1);
-
-	printf("StartValue = [%d]\n", start_value);
-	printf("NB Chunks [%ld]\n", chunk.nb_chunks);
-
-	j = 0;
-	while (j < (int)chunk.nb_chunks)
+	i = 0;
+	while (i < size)
 	{
-		i = 0;
-		chunk.range[j] = malloc(sizeof(int) * val->size_a + 1);
-		printf("# Malloc Range [%d]\n", j);
-		while (i < 20)
+		if (val->a[0] < hunter->mid)
 		{
-			chunk.range[j][i] = start_value;
-			printf("\t- Add range [%d]\n", chunk.range[j][i]);
-			++i;
-			++start_value;
-		}
-		chunk.range[j][i] = 0;
-		++j;
-	}
-	chunk.range[j] = NULL;
-	return (chunk);
-}
-
-static t_bool value_is_in_chunk(int value, int *range)
-{
-	int i;
-
-	i = 0;
-	while (range[i])
-	{
-		if (value == range[i])
-			return (TRUE);
-		++i;
-	}
-	return (FALSE);
-}
-
-static int get_min_value_in_chunk(int *h, int *range)
-{
-	int min;
-	int i;
-
-	i = 0;
-	min = h[0];
-	while (h[i])
-	{
-		if (h[i] < min && value_is_in_chunk(h[i], range))
-			min = h[i];
-		++i;
-	}
-	return (min);
-}
-
-static t_hckunk get_first_value_in_heap_by_chunk_from_end(int *h, UINT size, int *range)
-{
-	UINT i;
-
-	i = size - 1;
-	while (i > 0)
-	{
-		if (value_is_in_chunk(h[i], range))
-			return ((t_hckunk){h[i], TRUE});
-		--i;
-	}
-	return ((t_hckunk){h[0], FALSE});
-}
-
-static t_hckunk get_first_value_in_heap_by_chunk_from_start(int *h, UINT size, int *range)
-{
-	UINT i;
-
-	i = 0;
-	while (i < size)
-	{
-		if (value_is_in_chunk(h[i], range))
-			return ((t_hckunk){h[i], TRUE});
-		++i;
-	}
-	return ((t_hckunk){h[0], FALSE});
-}
-
-static int get_nbr_pos_in_heap(int *h, UINT size, int value)
-{
-	UINT i;
-
-	i = 0;
-	while (i < size)
-	{
-		if (value == h[i])
-			return (i);
-		++i;
-	}
-	return (i);
-}
-
-static int get_nb_moves_to_first_position(UINT size, int pos)
-{
-	int med;
-	int val;
-
-	med = size / 2;
-	if (pos > med)
-		val = size - pos;
-	else
-		val = pos;
-	return (val);
-}
-
-
-static int hunter_sort(t_val *val)
-{
-	t_chunk chunk;
-
-	chunk = init_chunks(val);
-
-	printf("### [%ld] Chunks ###\n", chunk.nb_chunks);
-	for (size_t i = 0; i < chunk.nb_chunks; i++) {
-		printf("# chunk [%ld] | Range : [", i);
-		for (int j = 0; j < 20; j++) {
-			printf("%d, ", chunk.range[i][j]);
-		}
-		printf("]\n");
-	}
-
-	printf("\n\n######################\n\n");
-
-	while (val->size_a > 0)
-	{
-
-	int try = 0;
-	t_hckunk hold_first = (t_hckunk){0, FALSE};
-	t_hckunk hold_second = (t_hckunk){0, FALSE};
-
-	while (hold_first.result == FALSE)
-	{
-		hold_first = get_first_value_in_heap_by_chunk_from_start(val->a, val->size_a, chunk.range[try]);
-		++try;
-	}
-	try = 0;
-	while (hold_second.result == FALSE)
-	{
-		hold_second = get_first_value_in_heap_by_chunk_from_end(val->a, val->size_a, chunk.range[try]);
-		++try;
-	}
-
-	printf("Hold First = [%d]\n", hold_first.value);
-	printf("Hold Second = [%d]\n", hold_second.value);
-
-	int many_move_hf = get_nb_moves_to_first_position(val->size_a, get_nbr_pos_in_heap(val->a, val->size_a, hold_first.value));
-	int many_move_hs = get_nb_moves_to_first_position(val->size_a, get_nbr_pos_in_heap(val->a, val->size_a, hold_second.value));
-
-	printf("NMoves HF [%d]\n", many_move_hf);
-	printf("NMoves HS [%d]\n", many_move_hs);
-
-		if (val->a[0] == hold_first.value || val->a[0] == hold_second.value)
 			pb(val);
-		if (val->b[0] < val->b[1])
-			sb(val);
-		if (many_move_hf < many_move_hs)
-			ra(val);
-		else
-			rra(val);
+			++hunter->count_b;
+		}
+		else if (val->a[0] >= hunter->mid &&
+		heap_is_under_median(val->a, size, hunter->mid))
+		{
+			if (val->size_b > 0 && hunter->flag && val->b[0] < hunter->mid_b)
+			{
+				rr(val);
+			}
+			else
+				ra(val);
+			++hunter->count_a;
+		}
+		++i;
 	}
-	while (val->size_b > 0)
-		pa(val);
 	return (0);
 }
 
+static int hunter_sort_ha(t_val *val, int size)
+{
+	t_hunter hunter;
+	int count;
+
+	hunter.mid = get_middle_stack(val->a, size, 2);
+	hunter.mid_b = get_middle_stack(val->a, size, 4);
+	hunter.flag = val->size_b ? 0 : 1;
+	hunter.count_a = 0;
+	hunter.count_b = 0;
+	hunter_sort_ha_helper(val, size, &hunter);
+	while (hunter.count_a > 0 && heap_solved(val) &&
+	val->size_a != size - hunter.count_b)
+	{
+		rra(val);
+		--hunter.count_a;
+	}
+	count = size - hunter.count_b;
+	return (count);
+}
+
+
+static int hunter_sort_hb_helper(t_val *val, int size, t_hunter *hunter)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (val->b[0] >= hunter->mid)
+		{
+			pa(val);
+			++hunter->count_a;
+		}
+		else if (val->b[0] < hunter->mid &&
+		heap_is_upper_median(val->b, size, hunter->mid))
+		{
+			rb(val);
+			++hunter->count_b;
+		}
+		++i;
+	}
+
+	i = 0;
+	while (i < hunter->count_b && val->size_b != size - hunter->count_a &&
+	!heap_is_reverse_sorted(val->b, size))
+	{
+		rrb(val);
+		++i;
+	}
+	hunter_algo(val, hunter->count_a);
+	hunter_sort_hb(val, size - hunter->count_a);
+	return (0);
+}
+
+static int hunter_sort_hb(t_val *val, int size)
+{
+	t_hunter hunter;
+	int		i;
+
+	i = 0;
+	if ((size >= 1 && size <= 2) || reverse_sort(val->b, size))
+	{
+		while (i < size)
+		{
+			pa(val);
+			++i;
+		}
+		hunter_algo(val, size);
+		return (0);
+	}
+
+	if (size == 3)
+		return (case_three_b(val));
+
+	hunter.mid = get_middle_stack(val->b, size, 2);
+	hunter.count_a = 0;
+	hunter.count_b = 0;
+	hunter_sort_hb_helper(val, size, &hunter);
+	return (0);
+}
 
 /*
 ** HunterFunction Called
 */
 
-int	hunter_algo(t_val *val)
+int	hunter_algo(t_val *val, int size)
 {
+	t_hunter hunter;
 
-	// a faire si medium est pas ouf
-	//t_hunter hunter;
-
-	//init_hunter_sort(val, &hunter);
-	//print_hunter(&hunter, TRUE);
-	//print_hunter(&hunter, FALSE);
-
-	// medium part
-
-	hunter_sort(val);
-
-
-
-
-
-
-
-
-
-
-	//free_hunter(&hunter);
+	hunter.count_a = hunter_sort_ha(val, size);
+	hunter_algo(val, hunter.count_a);
+	hunter.count_b = size - hunter.count_a;
+	hunter_sort_hb(val, hunter.count_b);
 	return (0);
 }
