@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 10:42:11 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/21 11:29:57 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 12:20:04 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,22 @@ int	rrb(t_val *val)
 
 int	rrr(t_val *val)
 {
-	rra(val);
-	rrb(val);
+	int tmp;
+
+	if (val->size_a > 1)
+	{
+		tmp = val->a[val->size_a - 1];
+		--val->size_a;
+		ft_move_tab_down(val->a, &val->size_a);
+		val->a[0] = tmp;
+	}
+	if (val->size_b <= 1)
+	{
+		tmp = val->b[val->size_b - 1];
+		--val->size_b;
+		ft_move_tab_down(val->b, &val->size_b);
+		val->b[0] = tmp;
+	}
+	print_output(val, "rrr");
 	return (0);
 }

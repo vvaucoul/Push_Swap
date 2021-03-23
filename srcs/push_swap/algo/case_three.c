@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 14:04:37 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 20:58:39 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 11:35:25 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,56 +60,5 @@ int			case_three(t_val *val)
 		rra(val);
 	if (i == 5)
 		ra(val);
-	return (0);
-}
-
-static int	compare_third_value_b(t_val *val)
-{
-	int i0;
-	int i1;
-	int i2;
-
-	i0 = val->b[0];
-	i1 = val->b[1];
-	i2 = val->b[2];
-	if (i0 < i1 && i1 < i2 && i2 > i0)
-		return (0);
-	if (i0 > i1 && i1 < i2 && i2 > i0)
-		return (1);
-	if (i0 > i1 && i1 > i2 && i2 < i0)
-		return (2);
-	if (i0 < i1 && i1 > i2 && i2 > i0)
-		return (3);
-	if (i0 < i1 && i1 > i2 && i2 < i0)
-		return (4);
-	if (i0 > i1 && i1 < i2 && i2 < i0)
-		return (5);
-	return (-1);
-}
-
-int			case_three_b(t_val *val)
-{
-	int i;
-
-	if ((i = compare_third_value_b(val)) == -1)
-		return (print_error("Error : Algorithm", 1));
-	if (i == 0)
-		return (0);
-	if (i == 1)
-		sb(val);
-	if (i == 2)
-	{
-		sb(val);
-		rrb(val);
-	}
-	if (i == 3)
-	{
-		sb(val);
-		rb(val);
-	}
-	if (i == 4)
-		rrb(val);
-	if (i == 5)
-		rb(val);
 	return (0);
 }
