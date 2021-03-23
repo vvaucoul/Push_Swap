@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 14:49:06 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/23 12:10:51 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 16:32:09 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static int get_middle_stack(int *h, UINT size, int div)
 	sort(tab, size);
 	middle = tab[size / div];
 	free(tab);
-	printf("# Middle Stack [%d]\n", middle);
+	//printf("# Middle Stack [%d]\n", middle);
 	return (middle);
 }
 
@@ -91,7 +91,7 @@ static int heap_is_under_median(int *h, int size, int middle)
 	int i;
 
 	i = 0;
-	printf("# Heap Is - UNDER - Median | Size %d | Middle %d\n", size, middle);
+	//printf("# Heap Is - UNDER - Median | Size %d | Middle %d\n", size, middle);
 	while (i < size)
 	{
 		if (h[i] < middle)
@@ -107,7 +107,7 @@ static int heap_is_upper_median(int *h, int size, int middle)
 	int i;
 
 	i = 0;
-	printf("# Heap Is - UPPER - Median | Size %d | Middle %d\n", size, middle);
+	//printf("# Heap Is - UPPER - Median | Size %d | Middle %d\n", size, middle);
 	while (i < size)
 	{
 		if (h[i] >= middle)
@@ -157,7 +157,7 @@ static int hunter_sort_three_b(t_val *val, UINT size)
 	int b;
 	int c;
 
-	printf("# Sort Case Simple three B\n");
+	//printf("# Sort Case Simple three B\n");
 	a = val->b[0];
 	b = val->b[1];
 	c = val->b[2];
@@ -188,7 +188,7 @@ static int hunter_simple_sort_three_a(t_val *val, UINT size)
 	int b;
 	int c;
 
-	printf("# Sort Case Simple three A\n");
+	//printf("# Sort Case Simple three A\n");
 	a = val->a[0];
 	b = val->a[1];
 	c = val->a[2];
@@ -217,19 +217,19 @@ static int hunter_sort_three_a(t_val *val, UINT size)
 	int b;
 	int c;
 
-	printf("# Sort Case three A\n");
-	printf("# Size = %ld\n", size);
+	//printf("# Sort Case three A\n");
+	//printf("# Size = %ld\n", size);
 	if (size == 3)
 		return (hunter_simple_sort_three_a(val, size));
 	a = val->a[0];
-	printf("\t# A = %d\n", a);
+	//printf("\t# A = %d\n", a);
 	b = val->a[1];
-	printf("\t# B = %d\n", b);
+	//printf("\t# B = %d\n", b);
 	c = val->a[2];
-	printf("\t# C = %d\n", c);
+	//printf("\t# C = %d\n", c);
 
-	printf("\t# B[0] = %d\n", val->b[0]);
-	printf("\t# B[1] = %d\n", val->b[1]);
+	//printf("\t# B[0] = %d\n", val->b[0]);
+	//printf("\t# B[1] = %d\n", val->b[1]);
 	if (a > b)
 	{
 		if (val->b[0] < val->b[1])
@@ -252,8 +252,8 @@ static int hunter_sort_ha_helper(t_val *val, int size, t_hunter *hunter)
 	int i;
 
 	i = 0;
-	printf("### HUNTER SORT HA_HELPER ###\n\n");
-	printf("# Size = %d\n", size);
+	//printf("### HUNTER SORT HA_HELPER ###\n\n");
+	//printf("# Size = %d\n", size);
 	while (i < size)
 	{
 		if (val->a[0] < hunter->mid)
@@ -262,8 +262,9 @@ static int hunter_sort_ha_helper(t_val *val, int size, t_hunter *hunter)
 			++hunter->count_b;
 		}
 		else if (val->a[0] >= hunter->mid &&
-		heap_is_under_median(val->a, val->size_a, hunter->mid))
+		heap_is_under_median(val->a, size, hunter->mid))
 		{
+			//exit(0);
 			if (val->size_b > 0 && hunter->flag && val->b[0] < hunter->mid_b)
 			{
 				rr(val);
@@ -285,14 +286,14 @@ static int hunter_sort_ha(t_val *val, int size)
 	hunter.mid = get_middle_stack(val->a, size, 2);
 	hunter.mid_b = get_middle_stack(val->a, size, 4);
 	hunter.flag = val->size_b ? 0 : 1;
-	printf("### HUNTER SORT HA ###\n\n");
-	printf("# Size = %d\n", size);
-	printf("# FLag = %d\n", hunter.flag);
+	//printf("### HUNTER SORT HA ###\n\n");
+	//printf("# Size = %d\n", size);
+	//printf("# FLag = %d\n", hunter.flag);
 	hunter.count_a = 0;
 	hunter.count_b = 0;
 	hunter_sort_ha_helper(val, size, &hunter);
-	printf("# Count_A = %d\n", hunter.count_a);
-	printf("# Count_B = %d\n", hunter.count_b);
+	//printf("# Count_A = %d\n", hunter.count_a);
+	//printf("# Count_B = %d\n", hunter.count_b);
 	while (hunter.count_a > 0 && heap_solved(val) &&
 	val->size_a != size - hunter.count_b)
 	{
@@ -300,7 +301,7 @@ static int hunter_sort_ha(t_val *val, int size)
 		--hunter.count_a;
 	}
 	count = size - hunter.count_b;
-	printf("# Return count = %d\n", count);
+	//printf("# Return count = %d\n", count);
 	return (count);
 }
 
@@ -310,8 +311,8 @@ static int hunter_sort_hb_helper(t_val *val, int size, t_hunter *hunter)
 	int i;
 
 	i = 0;
-	printf("### HUNTER SORT HB_HELPER ###\n\n");
-	printf("# Size = %d\n", size);
+	//printf("### HUNTER SORT HB_HELPER ###\n\n");
+	//printf("# Size = %d\n", size);
 	while (i < size)
 	{
 		if (val->b[0] >= hunter->mid)
@@ -319,8 +320,8 @@ static int hunter_sort_hb_helper(t_val *val, int size, t_hunter *hunter)
 			pa(val);
 			++hunter->count_a;
 		}
-		else if (val->b[0] < hunter->mid &&
-		heap_is_upper_median(val->b, val->size_b, hunter->mid))
+		else if (val->size_b > 0 && val->b[0] < hunter->mid &&
+		heap_is_upper_median(val->b, size, hunter->mid))
 		{
 			rb(val);
 			++hunter->count_b;
@@ -334,9 +335,9 @@ static int hunter_sort_hb_helper(t_val *val, int size, t_hunter *hunter)
 		rrb(val);
 		++i;
 	}
+	//exit(0);
 	hunter_algo(val, hunter->count_a);
 	hunter_sort_hb(val, size - hunter->count_a);
-//	exit(0);
 	return (0);
 }
 
@@ -346,14 +347,14 @@ static int hunter_sort_hb(t_val *val, int size)
 	int		i;
 
 	i = 0;
-	printf("### HUNTER SORT HB ###\n\n");
-	printf("# Size = %d\n", size);
+	//printf("### HUNTER SORT HB ###\n\n");
+	//printf("# Size = %d\n", size);
 	if ((size >= 1 && size <= 2) || reverse_sort(val->b, size))
 	{
 		while (i < size)
 		{
-			pa(val);
 			++i;
+			pa(val);
 		}
 		hunter_algo(val, size);
 		return (0);
@@ -363,11 +364,11 @@ static int hunter_sort_hb(t_val *val, int size)
 	hunter.mid = get_middle_stack(val->b, size, 2);
 	hunter.count_a = 0;
 	hunter.count_b = 0;
-	printf("# Count_A = %d\n", hunter.count_a);
-	printf("# Count_B = %d\n", hunter.count_b);
+	//printf("# Count_A = %d\n", hunter.count_a);
+	//printf("# Count_B = %d\n", hunter.count_b);
 	hunter_sort_hb_helper(val, size, &hunter);
-	printf("# Count_A = %d\n", hunter.count_a);
-	printf("# Count_B = %d\n", hunter.count_b);
+	//printf("# Count_A = %d\n", hunter.count_a);
+	//printf("# Count_B = %d\n", hunter.count_b);
 	return (0);
 }
 
@@ -379,12 +380,18 @@ int	hunter_algo(t_val *val, int size)
 {
 	t_hunter hunter;
 
-	printf("### HUNTER ALGO ###\n\n");
-	printf("# Size = %d\n", size);
+	//printf("### HUNTER ALGO ###\n\n");
+	//printf("# Size = %d\n", size);
 	if (!heap_solved(val))
+	{
+		//printf("### Heap is Solved\n");
 		return (0);
+	}
 	if (size == 1 || heap_is_sorted(val->a, val->size_a))
+	{
+		//printf("### Heap is Sorted\n");
 		return (0);
+	}
 	if (size == 2)
 	{
 		if (val->size_b > 0 && val->b[0] < val->b[1])
@@ -398,10 +405,10 @@ int	hunter_algo(t_val *val, int size)
 		return (0);
 	}
 	hunter.count_a = hunter_sort_ha(val, size);
-	printf("# Count_A = %d\n", hunter.count_a);
+	//printf("# Count_A = %d\n", hunter.count_a);
 	hunter_algo(val, hunter.count_a);
 	hunter.count_b = size - hunter.count_a;
-	printf("# Count_B = %d\n", hunter.count_b);
+	//printf("# Count_B = %d\n", hunter.count_b);
 	hunter_sort_hb(val, hunter.count_b);
 	return (0);
 }

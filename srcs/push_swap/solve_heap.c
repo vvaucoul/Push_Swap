@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 14:01:23 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/23 12:01:33 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 16:37:36 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ int	solve_heap(t_val *val)
 
 	hunter_algo(val, val->size_a);
 //	system("leaks push_swap");
+
+
+
 	return (0);
 }

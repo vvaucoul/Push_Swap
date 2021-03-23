@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/22 20:58:36 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 16:36:18 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,6 @@ typedef struct	s_hunter
 	int			flag;
 }				t_hunter;
 
-int	hunter_algo(t_val *val, int size);
+int				hunter_algo(t_val *val, int size);
 
 #endif

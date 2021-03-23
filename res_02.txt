@@ -1,0 +1,1663 @@
+ra
+ra
+pb
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+pb
+pb
+pb
+rr
+rr
+rr
+rr
+pb
+pb
+ra
+pb
+pb
+pb
+rr
+pb
+rr
+pb
+pb
+pb
+rr
+pb
+rr
+rr
+ra
+pb
+pb
+ra
+pb
+pb
+pb
+rr
+ra
+pb
+pb
+ra
+pb
+pb
+ra
+pb
+rr
+pb
+pb
+ra
+pb
+rr
+pb
+ra
+ra
+ra
+pb
+pb
+pb
+rr
+ra
+pb
+pb
+rr
+pb
+ra
+ra
+pb
+ra
+pb
+rr
+pb
+pb
+pb
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+pb
+pb
+pb
+pb
+### HUNTER ALGO ###
+
+# Size = 100
+# Middle Stack [50]
+# Middle Stack [25]
+### HUNTER SORT HA ###
+
+# Size = 100
+# FLag = 1
+### HUNTER SORT HA_HELPER ###
+
+# Size = 100
+# Heap Is - UNDER - Median | Size 100 | Middle 50
+# Heap Is - UNDER - Median | Size 100 | Middle 50
+# Heap Is - UNDER - Median | Size 99 | Middle 50
+# Heap Is - UNDER - Median | Size 95 | Middle 50
+# Heap Is - UNDER - Median | Size 95 | Middle 50
+# Heap Is - UNDER - Median | Size 95 | Middle 50
+# Heap Is - UNDER - Median | Size 95 | Middle 50
+# Heap Is - UNDER - Median | Size 93 | Middle 50
+# Heap Is - UNDER - Median | Size 88 | Middle 50
+# Heap Is - UNDER - Median | Size 88 | Middle 50
+# Heap Is - UNDER - Median | Size 88 | Middle 50
+# Heap Is - UNDER - Median | Size 88 | Middle 50
+# Heap Is - UNDER - Median | Size 86 | Middle 50
+# Heap Is - UNDER - Median | Size 83 | Middle 50
+# Heap Is - UNDER - Median | Size 82 | Middle 50
+# Heap Is - UNDER - Median | Size 79 | Middle 50
+# Heap Is - UNDER - Median | Size 78 | Middle 50
+# Heap Is - UNDER - Median | Size 78 | Middle 50
+# Heap Is - UNDER - Median | Size 78 | Middle 50
+# Heap Is - UNDER - Median | Size 76 | Middle 50
+# Heap Is - UNDER - Median | Size 73 | Middle 50
+# Heap Is - UNDER - Median | Size 73 | Middle 50
+# Heap Is - UNDER - Median | Size 71 | Middle 50
+# Heap Is - UNDER - Median | Size 69 | Middle 50
+# Heap Is - UNDER - Median | Size 68 | Middle 50
+# Heap Is - UNDER - Median | Size 66 | Middle 50
+# Heap Is - UNDER - Median | Size 65 | Middle 50
+# Heap Is - UNDER - Median | Size 64 | Middle 50
+# Heap Is - UNDER - Median | Size 64 | Middle 50
+# Heap Is - UNDER - Median | Size 64 | Middle 50
+# Heap Is - UNDER - Median | Size 61 | Middle 50
+# Heap Is - UNDER - Median | Size 61 | Middle 50
+# Heap Is - UNDER - Median | Size 59 | Middle 50
+# Heap Is - UNDER - Median | Size 58 | Middle 50
+# Heap Is - UNDER - Median | Size 58 | Middle 50
+# Heap Is - UNDER - Median | Size 57 | Middle 50
+# Heap Is - UNDER - Median | Size 56 | Middle 50
+# Heap Is - UNDER - Median | Size 52 | Middle 50
+# Heap Is - UNDER - Median | Size 51 | Middle 50
+# Heap Is - UNDER - Median | Size 51 | Middle 50
+# Heap Is - UNDER - Median | Size 51 | Middle 50
+# Heap Is - UNDER - Median | Size 51 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Heap Is - UNDER - Median | Size 50 | Middle 50
+# Count_A = 42
+# Count_B = 50
+# Return count = 50
+# Count_A = 50
+### HUNTER ALGO ###
+
+# Size = 50
+# Middle Stack [75]
+# Middle Stack [62]
+### HUNTER SORT HA ###
+
+# Size = 50
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 50
+# Heap Is - UNDER - Median | Size 49 | Middle 75
+# Heap Is - UNDER - Median | Size 48 | Middle 75
+# Heap Is - UNDER - Median | Size 46 | Middle 75
+# Heap Is - UNDER - Median | Size 46 | Middle 75
+# Heap Is - UNDER - Median | Size 46 | Middle 75
+# Heap Is - UNDER - Median | Size 45 | Middle 75
+# Heap Is - UNDER - Median | Size 45 | Middle 75
+# Heap Is - UNDER - Median | Size 45 | Middle 75
+# Heap Is - UNDER - Median | Size 45 | Middle 75
+# Heap Is - UNDER - Median | Size 45 | Middle 75
+# Heap Is - UNDER - Median | Size 44 | Middle 75
+# Heap Is - UNDER - Median | Size 44 | Middle 75
+# Heap Is - UNDER - Median | Size 44 | Middle 75
+# Heap Is - UNDER - Median | Size 44 | Middle 75
+# Heap Is - UNDER - Median | Size 43 | Middle 75
+# Heap Is - UNDER - Median | Size 40 | Middle 75
+# Heap Is - UNDER - Median | Size 40 | Middle 75
+# Heap Is - UNDER - Median | Size 36 | Middle 75
+# Heap Is - UNDER - Median | Size 36 | Middle 75
+# Heap Is - UNDER - Median | Size 34 | Middle 75
+# Heap Is - UNDER - Median | Size 33 | Middle 75
+# Heap Is - UNDER - Median | Size 32 | Middle 75
+# Heap Is - UNDER - Median | Size 32 | Middle 75
+# Heap Is - UNDER - Median | Size 32 | Middle 75
+# Heap Is - UNDER - Median | Size 29 | Middle 75
+# Count_A = 25
+# Count_B ra
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+pb
+pb
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+ra
+pb
+pb
+pb
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+ss
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+sb
+pa
+sb
+pa
+pa
+rb
+pa
+pa
+pa
+rb
+rb
+pa
+pa
+rb
+pa
+rrb
+rrb
+rrb
+rrb
+ra
+pb
+pb
+pb
+rra
+ra
+sa
+rra
+sa
+pa
+sb
+pa
+sa
+pa
+pa
+pa
+rb
+pa
+rrb
+= 25
+# Return count = 25
+# Count_A = 25
+### HUNTER ALGO ###
+
+# Size = 25
+# Middle Stack [88]
+# Middle Stack [81]
+### HUNTER SORT HA ###
+
+# Size = 25
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 25
+# Heap Is - UNDER - Median | Size 25 | Middle 88
+# Heap Is - UNDER - Median | Size 25 | Middle 88
+# Heap Is - UNDER - Median | Size 25 | Middle 88
+# Heap Is - UNDER - Median | Size 24 | Middle 88
+# Heap Is - UNDER - Median | Size 24 | Middle 88
+# Heap Is - UNDER - Median | Size 24 | Middle 88
+# Heap Is - UNDER - Median | Size 23 | Middle 88
+# Heap Is - UNDER - Median | Size 23 | Middle 88
+# Heap Is - UNDER - Median | Size 21 | Middle 88
+# Heap Is - UNDER - Median | Size 20 | Middle 88
+# Heap Is - UNDER - Median | Size 17 | Middle 88
+# Heap Is - UNDER - Median | Size 14 | Middle 88
+# Heap Is - UNDER - Median | Size 14 | Middle 88
+# Count_A = 13
+# Count_B = 12
+# Return count = 13
+# Count_A = 13
+### HUNTER ALGO ###
+
+# Size = 13
+# Middle Stack [94]
+# Middle Stack [91]
+### HUNTER SORT HA ###
+
+# Size = 13
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 13
+# Heap Is - UNDER - Median | Size 13 | Middle 94
+# Heap Is - UNDER - Median | Size 13 | Middle 94
+# Heap Is - UNDER - Median | Size 13 | Middle 94
+# Heap Is - UNDER - Median | Size 11 | Middle 94
+# Heap Is - UNDER - Median | Size 9 | Middle 94
+# Heap Is - UNDER - Median | Size 7 | Middle 94
+# Heap Is - UNDER - Median | Size 7 | Middle 94
+# Count_A = 5
+# Count_B = 6
+# Return count = 7
+# Count_A = 7
+### HUNTER ALGO ###
+
+# Size = 7
+# Middle Stack [97]
+# Middle Stack [95]
+### HUNTER SORT HA ###
+
+# Size = 7
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 7
+# Heap Is - UNDER - Median | Size 6 | Middle 97
+# Heap Is - UNDER - Median | Size 6 | Middle 97
+# Heap Is - UNDER - Median | Size 6 | Middle 97
+# Heap Is - UNDER - Median | Size 4 | Middle 97
+# Count_A = 3
+# Count_B = 3
+# Return count = 4
+# Count_A = 4
+### HUNTER ALGO ###
+
+# Size = 4
+# Middle Stack [99]
+# Middle Stack [98]
+### HUNTER SORT HA ###
+
+# Size = 4
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 4
+# Heap Is - UNDER - Median | Size 4 | Middle 99
+# Heap Is - UNDER - Median | Size 2 | Middle 99
+# Count_A = 1
+# Count_B = 2
+# Return count = 2
+# Count_A = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Count_B = 6
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [91]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 90 | Middle 91
+# Heap Is - UPPER - Median | Size 90 | Middle 91
+# Heap Is - UPPER - Median | Size 90 | Middle 91
+### HUNTER ALGO ###
+
+# Size = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 0
+# Count_B = 12
+### HUNTER SORT HB ###
+
+# Size = 12
+# Middle Stack [81]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 12
+# Heap Is - UPPER - Median | Size 87 | Middle 81
+# Heap Is - UPPER - Median | Size 84 | Middle 81
+# Heap Is - UPPER - Median | Size 84 | Middle 81
+# Heap Is - UPPER - Median | Size 82 | Middle 81
+# Heap Is - UPPER - Median | Size 81 | Middle 81
+# Heap Is - UPPER - Median | Size 81 | Middle 81
+### HUNTER ALGO ###
+
+# Size = 6
+# Middle Stack [84]
+# Middle Stack [82]
+### HUNTER SORT HA ###
+
+# Size = 6
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 6
+# Heap Is - UNDER - Median | Size 19 | Middle 84
+# Heap Is - UNDER - Median | Size 16 | Middle 84
+# Heap Is - UNDER - Median | Size 16 | Middle 84
+# Count_A = 1
+# Count_B = 3
+# Return count = 3
+# Count_A = 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 16
+	# A = 86
+	# B = 87
+	# C = 84
+	# B[0] = 82
+	# B[1] = 81
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [78]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 79 | Middle 78
+# Heap Is - UPPER - Median | Size 78 | Middle 78
+# Heap Is - UPPER - Median | Size 78 | Middle 78
+### HUNTER ALGO ###
+
+# sa
+ra
+sa
+rra
+pa
+sb
+pa
+sa
+pa
+pa
+pa
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+pa
+rb
+pa
+rb
+pa
+pa
+rb
+pa
+pa
+rb
+pa
+rb
+pa
+pa
+pa
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+pb
+ra
+ra
+pb
+ra
+pb
+rra
+rra
+rra
+pb
+ra
+pb
+rra
+pa
+pa
+ss
+pa
+sb
+pa
+sa
+pa
+pa
+rb
+rb
+pa
+pa
+rrb
+rrb
+ra
+sa
+rra
+pa
+sb
+pa
+pa
+pa
+rb
+pa
+rb
+pa
+pa
+rb
+rb
+pa
+pa
+rrb
+rrb
+rrb
+rrb
+pb
+pb
+ra
+ra
+pb
+rra
+rra
+sa
+ra
+sa
+rra
+sa
+pa
+sb
+pa
+pa
+pa
+pa
+rb
+Size = 3
+# Sort Case three A
+# Size = 22
+	# A = 80
+	# B = 78
+	# C = 79
+	# B[0] = 76
+	# B[1] = 75
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 1
+# Count_A = 6
+# Count_B = 4
+# Count_B = 25
+### HUNTER SORT HB ###
+
+# Size = 25
+# Middle Stack [62]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 25
+# Heap Is - UPPER - Median | Size 73 | Middle 62
+# Heap Is - UPPER - Median | Size 73 | Middle 62
+# Heap Is - UPPER - Median | Size 72 | Middle 62
+# Heap Is - UPPER - Median | Size 72 | Middle 62
+# Heap Is - UPPER - Median | Size 72 | Middle 62
+# Heap Is - UPPER - Median | Size 72 | Middle 62
+# Heap Is - UPPER - Median | Size 72 | Middle 62
+# Heap Is - UPPER - Median | Size 71 | Middle 62
+# Heap Is - UPPER - Median | Size 70 | Middle 62
+# Heap Is - UPPER - Median | Size 68 | Middle 62
+# Heap Is - UPPER - Median | Size 66 | Middle 62
+# Heap Is - UPPER - Median | Size 65 | Middle 62
+### HUNTER ALGO ###
+
+# Size = 13
+# Middle Stack [68]
+# Middle Stack [65]
+### HUNTER SORT HA ###
+
+# Size = 13
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 13
+# Heap Is - UNDER - Median | Size 38 | Middle 68
+# Heap Is - UNDER - Median | Size 38 | Middle 68
+# Heap Is - UNDER - Median | Size 37 | Middle 68
+# Heap Is - UNDER - Median | Size 35 | Middle 68
+# Heap Is - UNDER - Median | Size 34 | Middle 68
+# Heap Is - UNDER - Median | Size 34 | Middle 68
+# Heap Is - UNDER - Median | Size 34 | Middle 68
+# Count_A = 7
+# Count_B = 6
+# Return count = 7
+# Count_A = 7
+### HUNTER ALGO ###
+
+# Size = 7
+# Middle Stack [71]
+# Middle Stack [69]
+### HUNTER SORT HA ###
+
+# Size = 7
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 7
+# Heap Is - UNDER - Median | Size 31 | Middle 71
+# Heap Is - UNDER - Median | Size 31 | Middle 71
+# Heap Is - UNDER - Median | Size 30 | Middle 71
+# Heap Is - UNDER - Median | Size 29 | Middle 71
+# Count_A = 3
+# Count_B = 3
+# Return count = 4
+# Count_A = 4
+### HUNTER ALGO ###
+
+# Size = 4
+# Middle Stack [73]
+# Middle Stack [72]
+### HUNTER SORT HA ###
+
+# Size = 4
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 4
+# Heap Is - UNDER - Median | Size 28 | Middle 73
+# Heap Is - UNDER - Median | Size 27 | Middle 73
+# Count_A = 1
+# Count_B = 2
+# Return count = 2
+# Count_A = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_B = 6
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [65]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 67 | Middle 65
+# Heap Is - UPPER - Median | Size 67 | Middle 65
+# Heap Is - UPPER - Median | Size 65 | Middle 65
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 35
+	# A = 65
+	# B = 67
+	# C = 66
+	# B[0] = 64
+	# B[1] = 62
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 12
+# Middle Stack [56]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 12
+# Heap Is - UPPER - Median | Size 61 | Middle 56
+# Heap Is - UPPER - Median | Size 60 | Middle 56
+# Heap Is - UPPER - Median | Size 58 | Middle 56
+# Heap Is - UPPER - Median | Size 58 | Middle 56
+# Heap Is - UPPER - Median | Size 56 | Middle 56
+# Heap Is - UPPER - Median | Size 56 | Middle 56
+### HUNTER ALGO ###
+
+# Size = 6
+# Middle Stack [59]
+# Middle Stack [57]
+### HUNTER SORT HA ###
+
+# Size = 6
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 6
+# Heap Is - UNDER - Median | Size 42 | Middle 59
+# Heap Is - UNDER - Median | Size 42 | Middle 59
+# Heap Is - UNDER - Median | Size 41 | Middle 59
+# Count_A = 2
+# Count_B = 3
+# Return count = 3
+# Count_A = 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 41
+	# A = 61
+	# B = 60
+	# C = 59
+	# B[0] = 58
+	# B[1] = 56
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [53]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 54 | Middle 53
+# Herb
+pa
+rrb
+rrb
+ss
+ra
+sa
+rra
+pa
+sb
+pa
+pa
+pa
+pa
+pa
+rb
+pa
+pa
+pa
+pa
+pa
+pa
+rb
+pa
+pa
+rb
+pa
+rb
+pa
+rb
+pa
+rb
+pa
+pa
+pa
+pa
+pa
+pa
+rb
+pa
+pa
+rb
+pa
+pa
+pa
+pb
+ra
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+pb
+ra
+ra
+pb
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+ra
+pb
+ra
+pb
+pb
+rra
+rra
+rra
+rra
+rra
+rra
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+rra
+rra
+rra
+rra
+ra
+pb
+pb
+rra
+pa
+pa
+ss
+pa
+sb
+pa
+sa
+pa
+ap Is - UPPER - Median | Size 54 | Middle 53
+# Heap Is - UPPER - Median | Size 53 | Middle 53
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 47
+	# A = 55
+	# B = 53
+	# C = 54
+	# B[0] = 50
+	# B[1] = 52
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 2
+# Count_A = 6
+# Count_B = 4
+# Count_A = 13
+# Count_B = 12
+# Count_B = 50
+### HUNTER SORT HB ###
+
+# Size = 50
+# Middle Stack [25]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 50
+# Heap Is - UPPER - Median | Size 47 | Middle 25
+# Heap Is - UPPER - Median | Size 41 | Middle 25
+# Heap Is - UPPER - Median | Size 39 | Middle 25
+# Heap Is - UPPER - Median | Size 38 | Middle 25
+# Heap Is - UPPER - Median | Size 37 | Middle 25
+# Heap Is - UPPER - Median | Size 36 | Middle 25
+# Heap Is - UPPER - Median | Size 30 | Middle 25
+# Heap Is - UPPER - Median | Size 28 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+# Heap Is - UPPER - Median | Size 25 | Middle 25
+### HUNTER ALGO ###
+
+# Size = 25
+# Middle Stack [37]
+# Middle Stack [31]
+### HUNTER SORT HA ###
+
+# Size = 25
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 25
+# Heap Is - UNDER - Median | Size 74 | Middle 37
+# Heap Is - UNDER - Median | Size 74 | Middle 37
+# Heap Is - UNDER - Median | Size 73 | Middle 37
+# Heap Is - UNDER - Median | Size 73 | Middle 37
+# Heap Is - UNDER - Median | Size 73 | Middle 37
+# Heap Is - UNDER - Median | Size 73 | Middle 37
+# Heap Is - UNDER - Median | Size 70 | Middle 37
+# Heap Is - UNDER - Median | Size 70 | Middle 37
+# Heap Is - UNDER - Median | Size 69 | Middle 37
+# Heap Is - UNDER - Median | Size 67 | Middle 37
+# Heap Is - UNDER - Median | Size 66 | Middle 37
+# Heap Is - UNDER - Median | Size 64 | Middle 37
+# Heap Is - UNDER - Median | Size 64 | Middle 37
+# Count_A = 13
+# Count_B = 12
+# Return count = 13
+# Count_A = 13
+### HUNTER ALGO ###
+
+# Size = 13
+# Middle Stack [43]
+# Middle Stack [40]
+### HUNTER SORT HA ###
+
+# Size = 13
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 13
+# Heap Is - UNDER - Median | Size 63 | Middle 43
+# Heap Is - UNDER - Median | Size 63 | Middle 43
+# Heap Is - UNDER - Median | Size 63 | Middle 43
+# Heap Is - UNDER - Median | Size 61 | Middle 43
+# Heap Is - UNDER - Median | Size 60 | Middle 43
+# Heap Is - UNDER - Median | Size 59 | Middle 43
+# Heap Is - UNDER - Median | Size 57 | Middle 43
+# Count_A = 6
+# Count_B = 6
+# Return count = 7
+# Count_A = 7
+### HUNTER ALGO ###
+
+# Size = 7
+# Middle Stack [46]
+# Middle Stack [44]
+### HUNTER SORT HA ###
+
+# Size = 7
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 7
+# Heap Is - UNDER - Median | Size 57 | Middle 46
+# Heap Is - UNDER - Median | Size 57 | Middle 46
+# Heap Is - UNDER - Median | Size 56 | Middle 46
+# Heap Is - UNDER - Median | Size 55 | Middle 46
+# Count_A = 4
+# Count_B = 3
+# Return count = 4
+# Count_A = 4
+### HUNTER ALGO ###
+
+# Size = 4
+# Middle Stack [48]
+# Middle Stack [47]
+### HUNTER SORT HA ###
+
+# Size = 4
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 4
+# Heap Is - UNDER - Median | Size 54 | Middle 48
+# Heap Is - UNDER - Median | Size 52 | Middle 48
+# Count_A = 1
+# Count_B = 2
+# Return count = 2
+# Count_A = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_B rb
+rb
+pa
+pa
+rb
+pa
+rrb
+rrb
+rrb
+ra
+sa
+rra
+sa
+pa
+sb
+pa
+pa
+rb
+pa
+rb
+pa
+pa
+pa
+rb
+pa
+rb
+rb
+pa
+rrb
+rrb
+rrb
+rrb
+rrb
+ra
+ra
+pb
+pb
+pb
+rra
+rra
+ra
+ss
+rra
+sa
+pa
+sb
+pa
+pa
+rb
+rb
+pa
+rb
+pa
+pa
+rrb
+rrb
+rrb
+sa
+ra
+sa
+rra
+pa
+sb
+pa
+sa
+pa
+rb
+rb
+pa
+pa
+rb
+pa
+rb
+rb
+rb
+rb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+rb
+pa
+pa
+rb
+rb
+rb
+pa
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+pb
+ra
+ra
+pb
+rra
+rra
+rra
+rra
+rra
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+rra
+rra
+rra
+rra
+pb
+ra
+ra
+pb
+rra
+rra
+pa
+pa
+= 6
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [40]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 43 | Middle 40
+# Heap Is - UPPER - Median | Size 43 | Middle 40
+# Heap Is - UPPER - Median | Size 41 | Middle 40
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 60
+	# A = 41
+	# B = 42
+	# C = 40
+	# B[0] = 39
+	# B[1] = 37
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 3
+# Count_B = 12
+### HUNTER SORT HB ###
+
+# Size = 12
+# Middle Stack [31]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 12
+# Heap Is - UPPER - Median | Size 37 | Middle 31
+# Heap Is - UPPER - Median | Size 36 | Middle 31
+# Heap Is - UPPER - Median | Size 33 | Middle 31
+# Heap Is - UPPER - Median | Size 32 | Middle 31
+# Heap Is - UPPER - Median | Size 32 | Middle 31
+# Heap Is - UPPER - Median | Size 31 | Middle 31
+### HUNTER ALGO ###
+
+# Size = 6
+# Middle Stack [34]
+# Middle Stack [32]
+### HUNTER SORT HA ###
+
+# Size = 6
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 6
+# Heap Is - UNDER - Median | Size 69 | Middle 34
+# Heap Is - UNDER - Median | Size 69 | Middle 34
+# Heap Is - UNDER - Median | Size 66 | Middle 34
+# Count_A = 2
+# Count_B = 3
+# Return count = 3
+# Count_A = 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 66
+	# A = 35
+	# B = 36
+	# C = 34
+	# B[0] = 31
+	# B[1] = 33
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [28]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 31 | Middle 28
+# Heap Is - UPPER - Median | Size 31 | Middle 28
+# Heap Is - UPPER - Median | Size 30 | Middle 28
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 72
+	# A = 30
+	# B = 28
+	# C = 29
+	# B[0] = 26
+	# B[1] = 25
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 3
+# Count_A = 6
+# Count_B = 5
+### HUNTER SORT HB ###
+
+# Size = 25
+# Middle Stack [12]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 25
+# Heap Is - UPPER - Median | Size 25 | Middle 12
+# Heap Is - UPPER - Median | Size 25 | Middle 12
+# Heap Is - UPPER - Median | Size 23 | Middle 12
+# Heap Is - UPPER - Median | Size 22 | Middle 12
+# Heap Is - UPPER - Median | Size 22 | Middle 12
+# Heap Is - UPPER - Median | Size 22 | Middle 12
+# Heap Is - UPPER - Median | Size 22 | Middle 12
+# Heap Is - UPPER - Median | Size 15 | Middle 12
+# Heap Is - UPPER - Median | Size 13 | Middle 12
+# Heap Is - UPPER - Median | Size 13 | Middle 12
+# Heap Is - UPPER - Median | Size 13 | Middle 12
+# Heap Is - UPPER - Median | Size 12 | Middle 12
+### HUNTER ALGO ###
+
+# Size = 13
+# Middle Stack [18]
+# Middle Stack [15]
+### HUNTER SORT HA ###
+
+# Size = 13
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 13
+# Heap Is - UNDER - Median | Size 88 | Middle 18
+# Heap Is - UNDER - Median | Size 85 | Middle 18
+# Heap Is - UNDER - Median | Size 85 | Middle 18
+# Heap Is - UNDER - Median | Size 83 | Middle 18
+# Heap Is - UNDER - Median | Size 83 | Middle 18
+# Heap Is - UNDER - Median | Size 82 | Middle 18
+# Heap Is - UNDER - Median | Size 82 | Middle 18
+# Count_A = 5
+# Count_B = 6
+# Return count = 7
+# Count_A = 7
+### HUNTER ALGO ###
+
+# Size = 7
+# Middle Stack [21]
+# Middle Stack [19]
+### HUNTER SORT HA ###
+
+# Size = 7
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 7
+# Heap Is - UNDER - Median | Size 82 | Middle 21
+# Heap Is - UNDER - Median | Size 82 | Middle 21
+# Heap Is - UNDER - Median | Size 81 | Middle 21
+# Heap Is - UNDER - Median | Size 81 | Middle 21
+# Count_A = 4
+# Count_B = 3
+# Return count = 4
+# Count_A = 4
+### HUNTER ALGO ###
+
+# Size = 4
+# Middle Stack [23]
+# Middle Stack [22]
+### HUNTER SORT HA ###
+
+# Size = 4
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 4
+# Heap Is - UNDER - Median | Size 78 | Middle 23
+# Heap Is - UNDER - Median | Size 78 | Middle 23
+# Count_A = 2
+# Count_B = 2
+# Return count = 2
+# Count_A = 2
+### HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 2
+#sb
+pa
+sb
+pa
+sa
+pa
+rb
+pa
+rb
+pa
+pa
+rrb
+rrb
+ra
+ss
+rra
+sa
+pa
+sb
+pa
+sa
+pa
+pa
+rb
+pa
+rb
+pa
+pa
+rb
+rb
+pa
+pa
+ra
+pb
+pb
+ra
+ra
+pb
+rra
+rra
+rra
+ra
+sa
+rra
+pa
+pa
+pa
+rb
+pa
+rb
+rb
+pa
+pa
+ss
+ra
+sa
+rra
+pa
+sb
+pa
+sa
+pa
+## HUNTER ALGO ###
+
+# Size = 2
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_B = 6
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [15]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 18 | Middle 15
+# Heap Is - UPPER - Median | Size 17 | Middle 15
+# Heap Is - UPPER - Median | Size 15 | Middle 15
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 85
+	# A = 16
+	# B = 17
+	# C = 15
+	# B[0] = 12
+	# B[1] = 13
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 2
+### HUNTER SORT HB ###
+
+# Size = 12
+# Middle Stack [6]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 12
+# Heap Is - UPPER - Median | Size 11 | Middle 6
+# Heap Is - UPPER - Median | Size 10 | Middle 6
+# Heap Is - UPPER - Median | Size 8 | Middle 6
+# Heap Is - UPPER - Median | Size 8 | Middle 6
+# Heap Is - UPPER - Median | Size 6 | Middle 6
+# Heap Is - UPPER - Median | Size 6 | Middle 6
+### HUNTER ALGO ###
+
+# Size = 6
+# Middle Stack [9]
+# Middle Stack [7]
+### HUNTER SORT HA ###
+
+# Size = 6
+# FLag = 0
+### HUNTER SORT HA_HELPER ###
+
+# Size = 6
+# Heap Is - UNDER - Median | Size 94 | Middle 9
+# Heap Is - UNDER - Median | Size 92 | Middle 9
+# Heap Is - UNDER - Median | Size 92 | Middle 9
+# Count_A = 3
+# Count_B = 3
+# Return count = 3
+# Count_A = 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 91
+	# A = 9
+	# B = 11
+	# C = 10
+	# B[0] = 8
+	# B[1] = 7
+# Count_B = 3
+### HUNTER SORT HB ###
+
+# Size = 3
+### HUNTER ALGO ###
+
+# Size = 3
+### HUNTER SORT HB ###
+
+# Size = 6
+# Middle Stack [3]
+# Count_A = 0
+# Count_B = 0
+### HUNTER SORT HB_HELPER ###
+
+# Size = 6
+# Heap Is - UPPER - Median | Size 6 | Middle 3
+# Heap Is - UPPER - Median | Size 5 | Middle 3
+# Heap Is - UPPER - Median | Size 5 | Middle 3
+### HUNTER ALGO ###
+
+# Size = 3
+# Sort Case three A
+# Size = 97
+	# A = 5
+	# B = 3
+	# C = 4
+	# B[0] = 0
+	# B[1] = 1
+### HUNTER SORT HB ###
+
+# Size = 3
+# Sort Case Simple three B
+# Count_A = 3
+# Count_B = 3
+# Count_A = 6
+# Count_B = 4
+# Count_A = 13
+# Count_B = 11
+# Count_A = 25
+# Count_B = 8

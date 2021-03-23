@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 22:12:18 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/23 12:21:22 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/23 16:17:06 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ int	ss(t_val *val)
 {
 	int tmp;
 
-	if (val->size_a >= 2)
+	if (val->size_a > 1)
 	{
 		tmp = val->a[1];
 		val->a[1] = val->a[0];
 		val->a[0] = tmp;
 	}
-	if (val->size_b >= 2)
+	if (val->size_b > 1)
 	{
 		tmp = val->b[1];
 		val->b[1] = val->b[0];
