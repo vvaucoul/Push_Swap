@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 13:18:58 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/26 13:19:33 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 13:56:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 
 int		heap_is_sorted(int *heap, UINT size)
 {
-	UINT i = 0;
+	UINT i;
 
+	i = 0;
 	while (i < size - 1)
 	{
 		if (heap[i + 1] < heap[i])
@@ -29,7 +30,7 @@ int		heap_is_sorted(int *heap, UINT size)
 	return (1);
 }
 
-int	check_heap_reverse_sort(int *heap, UINT size)
+int		check_heap_reverse_sort(int *heap, UINT size)
 {
 	UINT i;
 
@@ -43,11 +44,11 @@ int	check_heap_reverse_sort(int *heap, UINT size)
 	return (1);
 }
 
-
-int	heap_is_reverse_sorted(int *heap, UINT size)
+int		heap_is_reverse_sorted(int *heap, UINT size)
 {
-	UINT i = 0;
+	UINT i;
 
+	i = 0;
 	while (i < size - 1)
 	{
 		if (heap[i + 1] > heap[i])
@@ -57,7 +58,7 @@ int	heap_is_reverse_sorted(int *heap, UINT size)
 	return (1);
 }
 
-int	check_heap_is_sorted(int *heap, UINT size)
+int		check_heap_is_sorted(int *heap, UINT size)
 {
 	int i;
 

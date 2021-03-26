@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/26 13:21:03 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 13:53:10 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,11 +96,11 @@ typedef struct	s_ss
 
 typedef struct	s_hunter
 {
-	int			mid;
-	int			mid_b;
-	int			count_b;
-	int			count_a;
-	int			flag;
+	int			median;
+	int			median_b;
+	int			pushed_a;
+	int			pushed_b;
+	int			heap_b_is_empty;
 }				t_hunter;
 
 int				hunter_algo(t_val *val, int size);
@@ -128,5 +128,13 @@ int				check_heap_is_sorted(int *heap, UINT size);
 
 int				hunter_median_under(int *heap, UINT size, int median);
 int				hunter_median_upper(int *heap, UINT size, int median);
+int				hunter_median(int *heap, UINT size, UINT div);
+
+/*
+** HUNTER SORT HEAPS
+*/
+
+int				sort_heap_a(t_val *val, int size);
+int				sort_heap_b(t_val *val, int size);
 
 #endif

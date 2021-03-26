@@ -6,12 +6,11 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:55:18 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/24 13:03:18 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 14:04:14 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include "../../includes/checker.h" //tmp
 
 /*
 ** Push swap Main
@@ -29,8 +28,6 @@ int	main(int argc, char **argv)
 		return (1);
 	val->print_output = 1;
 	solve_heap(val);
-	val->bonus_visualize = 1;
-	print_heaps(val);
 	free_val(val);
 	return (0);
 }
