@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:23:56 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/21 11:36:37 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 13:02:58 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static int		compare_input(t_val *val, const char *str)
 {
-	int (*operations[11])(t_val *val);
+	int (*operations[11])(t_val *val, t_bool print);
 	int execute;
 
 	init_array(operations);
@@ -31,7 +31,7 @@ static int		compare_input(t_val *val, const char *str)
 	}
 	else
 	{
-		operations[execute](val);
+		operations[execute](val, FALSE);
 		++val->nb_operation;
 		if ((update_visualisation(val, execute)))
 			return (1);

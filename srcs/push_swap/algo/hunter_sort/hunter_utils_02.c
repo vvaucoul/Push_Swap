@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   hunter_utils_02.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 12:55:18 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/24 13:03:18 by vvaucoul         ###   ########.fr       */
+/*   Created: 2021/03/26 13:19:14 by vvaucoul          #+#    #+#             */
+/*   Updated: 2021/03/26 13:19:27 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
-#include "../../includes/checker.h" //tmp
+#include "../../../../includes/push_swap.h"
 
-/*
-** Push swap Main
-**
-** val->bonus_visualize = 1;
-** val->bonus_last_change = 0;
-** val->print_output = 1;
-*/
-
-int	main(int argc, char **argv)
+int	hunter_median_under(int *heap, UINT size, int median)
 {
-	t_val *val;
+	UINT i = 0;
 
-	if ((val = init_param(argc, argv)) == NULL)
-		return (1);
-	val->print_output = 1;
-	solve_heap(val);
-	val->bonus_visualize = 1;
-	print_heaps(val);
-	free_val(val);
+	while (i < size)
+	{
+		if (heap[i] < median)
+			return (1);
+		++i;
+	}
+	return (0);
+}
+
+int	hunter_median_upper(int *heap, UINT size, int median)
+{
+	UINT i = 0;
+
+	while (i < size)
+	{
+		if (heap[i] >= median)
+			return (1);
+		++i;
+	}
 	return (0);
 }

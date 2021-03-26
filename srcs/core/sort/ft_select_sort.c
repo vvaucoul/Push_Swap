@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 15:09:03 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 19:40:43 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 12:28:25 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int		*assign_tab(int *tab, size_t size)
 	return (new_tab);
 }
 
-static int		get_min_value_index(int *nbr, int start)
+static int		get_min_value_index(int *nbr, int start, size_t size)
 {
 	int min;
 	int si;
@@ -37,8 +37,8 @@ static int		get_min_value_index(int *nbr, int start)
 
 	i = start;
 	si = 0;
-	min = 256;
-	while (nbr[i])
+	min = 2147483647;
+	while (i < size)
 	{
 		if (nbr[i] < min)
 		{
@@ -55,15 +55,13 @@ int				*ft_select_sort(int *default_nbr, size_t size)
 	int *nbr;
 	int i;
 	int min_value_index;
-	int len;
 	int tmp;
 
 	nbr = assign_tab(default_nbr, size);
 	i = 0;
-	len = size;
-	while (i < len)
+	while (i < size)
 	{
-		min_value_index = get_min_value_index(nbr, i);
+		min_value_index = get_min_value_index(nbr, i, size);
 		tmp = nbr[i];
 		nbr[i] = nbr[min_value_index];
 		nbr[min_value_index] = tmp;

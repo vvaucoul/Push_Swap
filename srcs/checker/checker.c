@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:09 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 20:15:06 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 13:23:44 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	main(int argc, char **argv)
 		free_val(val);
 		return (print_error(RED"- Use terminal size more than 54/16\n", 1));
 	}
+	val->bonus_visualize = 1;
+	print_heaps(val);
 	free_val(val);
 }

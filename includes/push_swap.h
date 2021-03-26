@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/23 16:36:18 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 13:21:03 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,9 @@ typedef struct	s_ss
 }				t_ss;
 
 /*
-** HUNTER ALGO (My Sort Algorithm)
+** HUNTER ALGO (My Sort Algorithm Based on Medium (Chunks))
 */
+
 typedef struct	s_hunter
 {
 	int			mid;
@@ -103,5 +104,29 @@ typedef struct	s_hunter
 }				t_hunter;
 
 int				hunter_algo(t_val *val, int size);
+
+/*
+** HUNTER SORT THREE CASE
+*/
+
+int				hunter_sort_three_just_a(t_val *val);
+int				hunter_sort_three_a(t_val *val);
+int				hunter_sort_three_b(t_val *val);
+
+/*
+** HUNTER UTILS
+*/
+
+int				heap_is_sorted(int *heap, UINT size);
+int				check_heap_reverse_sort(int *heap, UINT size);
+int				heap_is_reverse_sorted(int *heap, UINT size);
+int				check_heap_is_sorted(int *heap, UINT size);
+
+/*
+** HUNTER UTILS MEDIANS
+*/
+
+int				hunter_median_under(int *heap, UINT size, int median);
+int				hunter_median_upper(int *heap, UINT size, int median);
 
 #endif

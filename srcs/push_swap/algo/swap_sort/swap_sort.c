@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 11:13:03 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/21 19:49:00 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:26:08 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,17 @@ int		swap_sort(t_val *val)
 		min_value = get_min_value(val->a, val->size_a);
 		s_rotation = select_rotation(val->a, min_value, val->size_a);
 		if (val->a[0] == min_value)
-			pb(val);
+			pb(val, TRUE);
 		else if (s_rotation)
-			rra(val);
+			rra(val, TRUE);
 		else
-			ra(val);
+			ra(val, TRUE);
 		++i;
 	}
 	case_three(val);
 	if (val->b[0] < val->b[1])
-		sa(val);
+		sa(val, TRUE);
 	while (val->size_b > 0)
-		pa(val);
+		pa(val, TRUE);
 	return (0);
 }

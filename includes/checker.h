@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 22:04:39 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 20:15:07 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:34:40 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 
 int				read_input(t_val *val);
 int				get_operation(const char *str);
-void			init_array(int (*operations[11])(t_val *val));
+void			init_array(int (*operations[11])(t_val *val, t_bool print));
 
 /*
 ** BONUS PART

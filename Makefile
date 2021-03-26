@@ -6,7 +6,7 @@
 #    By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/03 22:02:22 by vvaucoul          #+#    #+#              #
-#    Updated: 2021/03/22 15:51:11 by vvaucoul         ###   ########.fr        #
+#    Updated: 2021/03/26 13:22:12 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,10 @@ SRCPS	=		srcs/core/solved.c	\
 				srcs/push_swap/algo/swap_sort/swap_sort.c	\
 				srcs/push_swap/solve_heap.c \
 				srcs/push_swap/push_swap.c	\
-				srcs/push_swap/algo/hunter_sort/hunter_algo.c
+				srcs/push_swap/algo/hunter_sort/hunter_algo.c \
+				srcs/push_swap/algo/hunter_sort/hunter_sort_three.c \
+				srcs/push_swap/algo/hunter_sort/hunter_utils.c \
+				srcs/push_swap/algo/hunter_sort/hunter_utils_02.c
 
 SRCR	=		tests/generate_random_numbers.c \
 				srcs/core/utils/utils_libft.c \

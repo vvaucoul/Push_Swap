@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 22:05:53 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:24:28 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:29:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int			print_error(const char *str, int error)
 	return (error);
 }
 
-void		print_output(t_val *val, const char *str)
+void		print_output(t_val *val, const char *str, t_bool print_output)
 {
-	if (val->print_output)
+	if (val->print_output || print_output)
 	{
 		write(1, str, ft_strlen(str));
 		write(1, "\n", 1);

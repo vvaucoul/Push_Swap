@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 14:27:52 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:53:55 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:25:28 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,24 @@ void	step_02_apply_change(t_val *val, t_cs *cs, int *nb_top_nbr)
 	while (val->b[0] != cs->value)
 	{
 		if (cs->rotation)
-			rrb(val);
+			rrb(val, TRUE);
 		else
-			rb(val);
+			rb(val, TRUE);
 	}
 	if (cs->min == cs->max)
 	{
-		pa(val);
+		pa(val, TRUE);
 		++(nb_top_nbr[0]);
 	}
 	else if (cs->min_or_max)
 	{
-		pa(val);
+		pa(val, TRUE);
 		++(nb_top_nbr[0]);
 	}
 	else
 	{
-		pa(val);
-		ra(val);
+		pa(val, TRUE);
+		ra(val, TRUE);
 	}
 }
 
@@ -62,7 +62,7 @@ int		step_02_rotate_heap(t_val *val, int nb_top_nbr, int default_size)
 	i = 0;
 	while (i < nb_top_nbr)
 	{
-		ra(val);
+		ra(val, TRUE);
 		++i;
 	}
 	if (!heap_solved(val))
@@ -70,7 +70,7 @@ int		step_02_rotate_heap(t_val *val, int nb_top_nbr, int default_size)
 	i = 0;
 	while (i < default_size)
 	{
-		pb(val);
+		pb(val, TRUE);
 		++i;
 	}
 	if (heap_solved(val))

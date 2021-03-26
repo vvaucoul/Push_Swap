@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/20 18:06:35 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:07:29 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:34:44 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int			get_operation(const char *str)
 	return (-1);
 }
 
-void		init_array(int (*operations[11])(t_val *val))
+void		init_array(int (*operations[11])(t_val *val, t_bool print))
 {
 	operations[0] = sa;
 	operations[1] = sb;

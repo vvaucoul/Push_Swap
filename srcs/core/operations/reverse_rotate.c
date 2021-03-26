@@ -6,13 +6,13 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 10:42:11 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/23 16:13:19 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 12:09:46 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
 
-int	rra(t_val *val)
+int	rra(t_val *val, t_bool print)
 {
 	int tmp;
 
@@ -22,11 +22,11 @@ int	rra(t_val *val)
 	--val->size_a;
 	ft_move_tab_down(val->a, &val->size_a);
 	val->a[0] = tmp;
-	print_output(val, "rra");
+	print_output(val, "rra", print);
 	return (0);
 }
 
-int	rrb(t_val *val)
+int	rrb(t_val *val, t_bool print)
 {
 	int tmp;
 
@@ -36,11 +36,11 @@ int	rrb(t_val *val)
 	--val->size_b;
 	ft_move_tab_down(val->b, &val->size_b);
 	val->b[0] = tmp;
-	print_output(val, "rrb");
+	print_output(val, "rrb", print);
 	return (0);
 }
 
-int	rrr(t_val *val)
+int	rrr(t_val *val, t_bool print)
 {
 	int tmp;
 
@@ -58,6 +58,6 @@ int	rrr(t_val *val)
 		ft_move_tab_down(val->b, &val->size_b);
 		val->b[0] = tmp;
 	}
-	print_output(val, "rrr");
+	print_output(val, "rrr", print);
 	return (0);
 }

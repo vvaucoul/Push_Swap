@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 14:55:53 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/21 19:44:57 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:25:07 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ static int	step_01(t_val *val, int median)
 		if (!(has_number_inferior_median(val->a, median, val->size_a)))
 			break ;
 		if (val->a[0] < median)
-			pb(val);
+			pb(val, TRUE);
 		else
-			ra(val);
+			ra(val, TRUE);
 		++i;
 	}
 	return (0);

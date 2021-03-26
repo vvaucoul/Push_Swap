@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 15:20:04 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:28:39 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:25:50 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** if (val->bonus_visualize)
 ** {
-** 	update_visualisation(val);
+** 	update_visualisation(val, TRUE);
 ** 	printf("\n\n");
 ** 	printf(BLUE);
 ** 	printf(BOLD);
@@ -47,25 +47,25 @@ static void		min_found(t_val *val, t_ss *ss)
 	}
 	if (min_r(val->a, val->size_a, ss->min) <
 	min_rr(val->a, val->size_a, ss->min))
-		ra(val);
+		ra(val, TRUE);
 	else
-		rra(val);
+		rra(val, TRUE);
 }
 
 static int		algo_sort(t_val *val, t_ss *ss)
 {
 	if (val->a[0] == ss->next_min)
 	{
-		pb(val);
+		pb(val, TRUE);
 		ss->swap_b = 1;
 	}
 	if (val->a[0] == ss->min)
 	{
 		ss->min_found = 1;
-		pb(val);
+		pb(val, TRUE);
 		if (ss->swap_b == 1)
 		{
-			sb(val);
+			sb(val, TRUE);
 			ss->swap_b = 0;
 		}
 	}
@@ -73,7 +73,7 @@ static int		algo_sort(t_val *val, t_ss *ss)
 	if (val->size_a == 0)
 	{
 		while (val->size_b != 0)
-			pa(val);
+			pa(val, TRUE);
 	}
 	return (0);
 }
