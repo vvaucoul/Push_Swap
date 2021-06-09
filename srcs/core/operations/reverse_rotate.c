@@ -6,13 +6,13 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 10:42:11 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/24 12:09:46 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:18:54 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
 
-int	rra(t_val *val, t_bool print)
+int	rra(t_val *val)
 {
 	int tmp;
 
@@ -22,11 +22,11 @@ int	rra(t_val *val, t_bool print)
 	--val->size_a;
 	ft_move_tab_down(val->a, &val->size_a);
 	val->a[0] = tmp;
-	print_output(val, "rra", print);
+	print_output(val, "rra");
 	return (0);
 }
 
-int	rrb(t_val *val, t_bool print)
+int	rrb(t_val *val)
 {
 	int tmp;
 
@@ -36,28 +36,14 @@ int	rrb(t_val *val, t_bool print)
 	--val->size_b;
 	ft_move_tab_down(val->b, &val->size_b);
 	val->b[0] = tmp;
-	print_output(val, "rrb", print);
+	print_output(val, "rrb");
 	return (0);
 }
 
-int	rrr(t_val *val, t_bool print)
+int	rrr(t_val *val)
 {
-	int tmp;
-
-	if (val->size_a > 1)
-	{
-		tmp = val->a[val->size_a - 1];
-		--val->size_a;
-		ft_move_tab_down(val->a, &val->size_a);
-		val->a[0] = tmp;
-	}
-	if (val->size_b > 1)
-	{
-		tmp = val->b[val->size_b - 1];
-		--val->size_b;
-		ft_move_tab_down(val->b, &val->size_b);
-		val->b[0] = tmp;
-	}
-	print_output(val, "rrr", print);
+	rra(val);
+	rrb(val);
+	--val->nb_operation;
 	return (0);
 }

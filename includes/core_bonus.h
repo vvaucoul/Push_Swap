@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   core_bonus.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 12:55:18 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:34:43 by vvaucoul         ###   ########.fr       */
+/*   Created: 2021/03/19 15:32:28 by vvaucoul          #+#    #+#             */
+/*   Updated: 2021/03/19 15:51:02 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#ifndef CORE_BONUS_H
+# define CORE_BONUS_H
 
-/*
-** Push swap Main
-**
-** val->bonus_visualize = 1;
-** val->bonus_last_change = 0;
-** val->print_output = 1;
-*/
+# include <stdio.h> //tmp
 
-int	main(int argc, char **argv)
-{
-	t_val *val;
+# include "../includes/core.h"
+# include "../includes/push_swap.h"
+# include "../includes/checker.h"
 
-	if ((val = init_param(argc, argv)) == NULL)
-		return (1);
-	val->print_output = 1;
-	solve_heap(val);
-	free_val(val);
-	return (0);
-}
+#endif

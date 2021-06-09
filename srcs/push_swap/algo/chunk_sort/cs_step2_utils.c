@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 14:07:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:54:21 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:28:29 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@
 ** [1] rra/b [0] ra/b
 */
 
-int	select_rotation(int *h, int value, UINT size)
+int	select_rotation(int *h, int value)
 {
-	UINT i;
+	int i;
+	int size;
 
 	i = 0;
+	size = ft_tablen(h);
 	while (h[i] != value)
 		++i;
 	if (i > size / 2)
@@ -42,7 +44,7 @@ int	select_rotation(int *h, int value, UINT size)
 ** [1] max [0] min
 */
 
-int	min_or_max_is_nearest(int *h, UINT size)
+int	min_or_max_is_nearest(int *h)
 {
 	int tmp;
 	int pos_max;
@@ -52,14 +54,14 @@ int	min_or_max_is_nearest(int *h, UINT size)
 	pos_max = 0;
 	pos_min = 0;
 	i = 0;
-	tmp = get_max_value(h, size);
+	tmp = get_max_value(h);
 	while (h[i] != tmp)
 	{
 		++pos_max;
 		++i;
 	}
 	i = 0;
-	tmp = get_min_value(h, size);
+	tmp = get_min_value(h);
 	while (h[i] != tmp)
 	{
 		++pos_min;
@@ -72,14 +74,14 @@ int	min_or_max_is_nearest(int *h, UINT size)
 ** MIN / MAX Functions
 */
 
-int	get_max_value(int *h, UINT size)
+int	get_max_value(int *h)
 {
-	int		max;
-	UINT	i;
+	int max;
+	int i;
 
 	i = 0;
 	max = h[0];
-	while (i < size)
+	while (h[i])
 	{
 		if (h[i] > max)
 			max = h[i];
@@ -88,14 +90,14 @@ int	get_max_value(int *h, UINT size)
 	return (max);
 }
 
-int	get_min_value(int *h, UINT size)
+int	get_min_value(int *h)
 {
-	int		min;
-	UINT	i;
+	int min;
+	int i;
 
 	i = 0;
 	min = h[0];
-	while (i < size)
+	while (h[i])
 	{
 		if (h[i] < min)
 			min = h[i];

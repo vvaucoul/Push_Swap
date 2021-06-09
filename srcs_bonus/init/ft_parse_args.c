@@ -6,11 +6,11 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:45:45 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:36:37 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:42:24 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../includes/core.h"
+#include "../../includes/core_bonus.h"
 
 char		*assign_line(char *str, int *start)
 {
