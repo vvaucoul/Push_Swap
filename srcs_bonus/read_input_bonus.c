@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_input.c                                       :+:      :+:    :+:   */
+/*   read_input_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:23:56 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:27:48 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:53:39 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/checker.h"
+#include "../includes/core_bonus.h"
 
 static int		get_operation(const char *str)
 {
@@ -80,6 +80,9 @@ static int		compare_input(t_val *val, const char *str)
 	{
 		operations[execute](val);
 		++val->nb_operation;
+		// ajouter previsualisation
+		update_visualisation(val);
+		usleep(DEBUG_TIME_TO_WAIT);
 	}
 	return (0);
 }

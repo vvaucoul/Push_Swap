@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 15:23:58 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:51:24 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:24:17 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ int			*ft_move_tab_down(int *tab, size_t *size)
 {
 	int i;
 
-	i = (*size);
-	if (i < 0)
-		i = 0;
+	i = *size;
 	while (i > 0)
 	{
 		if (i <= 0)
@@ -33,12 +31,12 @@ int			*ft_move_tab_down(int *tab, size_t *size)
 
 int			*ft_move_tab_up(int *tab, size_t *size)
 {
-	UINT i;
+	int i;
 
 	i = 0;
-	while (i < *size)
+	while ((size_t)i < *size)
 	{
-		if (i >= *size)
+		if ((size_t)i >= *size)
 			break ;
 		tab[i] = tab[i + 1];
 		++i;

@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 11:15:57 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:50:33 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:24:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ size_t		ft_tablen(const int *str)
 	return (i);
 }
 
-int			*ft_realloc_int(int *tab, int new_size, int size)
+int			*ft_realloc_int(int *tab, int new_size)
 {
 	int *tmp;
 	int i;
 	int len;
 
 	i = 0;
-	len = size;
+	len = ft_tablen(tab);
 	if (!tab)
 		return (NULL);
 	if (!(tmp = malloc(sizeof(int) * (new_size + 1))))

@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 14:12:32 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 18:53:19 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/19 15:29:04 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@
 ** Get median of heap (A / B)
 */
 
-int	get_heap_median(int *h, UINT size)
+int	get_heap_median(int *h)
 {
 	t_median med;
 
 	med.i = 0;
 	med.j = 0;
 	med.median = 0;
-	while (med.i < size)
+	while (med.i < ft_tablen(h))
 	{
 		med.key = h[med.i];
 		med.j = 0;
 		med.a = 0;
 		med.b = 0;
-		while (med.j < (int)size)
+		while (med.j < (int)ft_tablen(h))
 		{
 			if (h[med.j] > med.key)
 				++med.a;
@@ -44,12 +44,12 @@ int	get_heap_median(int *h, UINT size)
 	return (med.median);
 }
 
-int	has_number_inferior_median(int *h, int median, UINT size)
+int	has_number_inferior_median(int *h, int median)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (i < size)
+	while (h[i])
 	{
 		if (h[i] < median)
 			return (1);
