@@ -20,6 +20,11 @@ Ce projet consiste à trier une liste de nombre en utilisant seulement 2 piles e
 - pa: Envoie le premier nombre de la pile B vers la pile A
 - pb: Envoie le premier nombre de la pile A vers la pile B
 
+Le répo contient :
+- Un visualiseur pour voir l'état des piles à chaque actions.
+- La correction de l'ancien sujet.
+- Un testeur pour le projet push_swap !
+
 Ressources :
 
 - [Push Swap Medium](https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a)
