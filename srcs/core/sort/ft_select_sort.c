@@ -6,21 +6,21 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 15:09:03 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:20:02 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 14:07:47 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
 
-static int		*assign_tab(int *tab)
+static int		*assign_tab(int *tab, size_t size)
 {
 	int		*new_tab;
 	size_t	i;
 
 	i = 0;
-	if (!(new_tab = malloc(sizeof(int) * ft_tablen(tab))))
+	if (!(new_tab = malloc(sizeof(int) * (size + 1))))
 		return (NULL);
-	while (i < ft_tablen(tab))
+	while (i < size)
 	{
 		new_tab[i] = tab[i];
 		++i;
@@ -29,16 +29,16 @@ static int		*assign_tab(int *tab)
 	return (new_tab);
 }
 
-static int		get_min_value_index(int *nbr, int start)
+static int		get_min_value_index(int *nbr, int start, size_t size)
 {
-	int min;
-	int si;
-	int i;
+	int		min;
+	int		si;
+	size_t	i;
 
 	i = start;
 	si = 0;
-	min = 256;
-	while (nbr[i])
+	min = 2147483647;
+	while (i < size)
 	{
 		if (nbr[i] < min)
 		{
@@ -50,20 +50,18 @@ static int		get_min_value_index(int *nbr, int start)
 	return (si);
 }
 
-int				*ft_select_sort(int *default_nbr)
+int				*ft_select_sort(int *default_nbr, size_t size)
 {
-	int *nbr;
-	int i;
-	int min_value_index;
-	int len;
-	int tmp;
+	int		*nbr;
+	size_t	i;
+	int		min_value_index;
+	int		tmp;
 
-	nbr = assign_tab(default_nbr);
+	nbr = assign_tab(default_nbr, size);
 	i = 0;
-	len = ft_tablen(nbr);
-	while (i < len)
+	while (i < size)
 	{
-		min_value_index = get_min_value_index(nbr, i);
+		min_value_index = get_min_value_index(nbr, i, size);
 		tmp = nbr[i];
 		nbr[i] = nbr[min_value_index];
 		nbr[min_value_index] = tmp;

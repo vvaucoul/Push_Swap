@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:44:47 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:25:45 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/20 18:58:53 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,21 @@ void		print_heap(int *h, size_t size)
 	}
 }
 
+static void	display_nbr(UINT i, t_val *val)
+{
+	if (i < val->size_a)
+		ft_putnbr_fd(val->a[i], 1);
+	else
+		ft_putstr_fd(".", 1);
+	ft_putstr_fd("]\t|\t[", 1);
+	ft_putnbr_fd(i, 1);
+	ft_putstr_fd("] = [", 1);
+	if (i < val->size_b)
+		ft_putnbr_fd(val->b[i], 1);
+	else
+		ft_putstr_fd(".", 1);
+}
+
 void		print_heaps(t_val *val)
 {
 	size_t max_i;
@@ -44,11 +59,7 @@ void		print_heaps(t_val *val)
 		ft_putstr_fd("\t[", 1);
 		ft_putnbr_fd(i, 1);
 		ft_putstr_fd("] = [", 1);
-		ft_putnbr_fd(i < val->size_a ? val->a[i] : 0, 1);
-		ft_putstr_fd("]\t|\t[", 1);
-		ft_putnbr_fd(i, 1);
-		ft_putstr_fd("] = [", 1);
-		ft_putnbr_fd(i < val->size_b ? val->b[i] : 0, 1);
+		display_nbr(i, val);
 		ft_putstr_fd("]\n", 1);
 		++i;
 	}

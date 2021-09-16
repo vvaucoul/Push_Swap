@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:58:19 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:05:06 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 13:53:10 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int				solve_heap(t_val *val);
 */
 
 int				case_three(t_val *val);
+int				case_three_b(t_val *val);
 int				algo_02(t_val *val);
 int				algo_03(t_val *val);
+int				swap_sort(t_val *val);
 
 /*
 ****************
@@ -35,10 +37,10 @@ int				algo_03(t_val *val);
 ** CHUNK SORT UTILS
 */
 
-int				select_rotation(int *h, int value);
-int				min_or_max_is_nearest(int *h);
-int				get_max_value(int *h);
-int				get_min_value(int *h);
+int				select_rotation(int *h, int value, UINT size);
+int				min_or_max_is_nearest(int *h, UINT size);
+int				get_max_value(int *h, UINT size);
+int				get_min_value(int *h, UINT size);
 
 typedef struct	s_median
 {
@@ -50,8 +52,8 @@ typedef struct	s_median
 	int			key;
 }				t_median;
 
-int				get_heap_median(int *h);
-int				has_number_inferior_median(int *h, int median);
+int				get_heap_median(int *h, UINT size);
+int				has_number_inferior_median(int *h, int median, UINT size);
 
 typedef struct	s_cs
 {
@@ -87,5 +89,52 @@ typedef struct	s_ss
 	int			min_found;
 	int			swap_b;
 }				t_ss;
+
+/*
+** HUNTER ALGO (My Sort Algorithm Based on Medium (Chunks))
+*/
+
+typedef struct	s_hunter
+{
+	int			median;
+	int			median_b;
+	int			pushed_a;
+	int			pushed_b;
+	int			heap_b_is_empty;
+}				t_hunter;
+
+int				hunter_algo(t_val *val, int size);
+
+/*
+** HUNTER SORT THREE CASE
+*/
+
+int				hunter_sort_three_just_a(t_val *val);
+int				hunter_sort_three_a(t_val *val);
+int				hunter_sort_three_b(t_val *val);
+
+/*
+** HUNTER UTILS
+*/
+
+int				heap_is_sorted(int *heap, UINT size);
+int				check_heap_reverse_sort(int *heap, UINT size);
+int				heap_is_reverse_sorted(int *heap, UINT size);
+int				check_heap_is_sorted(int *heap, UINT size);
+
+/*
+** HUNTER UTILS MEDIANS
+*/
+
+int				hunter_median_under(int *heap, UINT size, int median);
+int				hunter_median_upper(int *heap, UINT size, int median);
+int				hunter_median(int *heap, UINT size, UINT div);
+
+/*
+** HUNTER SORT HEAPS
+*/
+
+int				sort_heap_a(t_val *val, int size);
+int				sort_heap_b(t_val *val, int size);
 
 #endif

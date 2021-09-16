@@ -6,15 +6,14 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:59:41 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:36:42 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/20 20:16:31 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
 
 /*
-** Bonus function
-** Remove all bonus flag for non bonus
+** Bonus Args
 */
 
 static int		get_valid_arg(char **tab)
@@ -26,11 +25,39 @@ static int		get_valid_arg(char **tab)
 	valid = 0;
 	while (tab[i])
 	{
-		if (!(is_valid_arg(tab[i])))
+		if (!(is_valid_arg(tab[i])) && (is_bonus_flag(tab[i])))
 			++valid;
 		++i;
 	}
 	return (valid);
+}
+
+static int		init_bonus_arg(t_val *val, int size, char **argv)
+{
+	int i;
+
+	i = 0;
+	val->print_output = 0;
+	val->bonus_visualize = 0;
+	val->bonus_last_change = 0;
+	val->display_bar = 0;
+	while (i < size)
+	{
+		if (!(is_bonus_flag(argv[i])))
+		{
+			if (!(ft_strcmp(argv[i], "-c")))
+			{
+				val->print_output = 1;
+				val->bonus_visualize = 1;
+			}
+			else if (!(ft_strcmp(argv[i], "-v")))
+				val->bonus_last_change = 1;
+			else if (!(ft_strcmp(argv[i], "-b")))
+				val->display_bar = 1;
+		}
+		++i;
+	}
+	return (0);
 }
 
 /*
@@ -46,7 +73,7 @@ static void		assign_heaps(t_val *val, int size, char **argv)
 	j = 0;
 	while (i < size)
 	{
-		if (!(is_valid_arg(argv[i])))
+		if (!(is_valid_arg(argv[i])) && (is_bonus_flag(argv[i])))
 		{
 			val->a[j] = ft_atoi(argv[i]);
 			val->b[j] = 0;
@@ -70,6 +97,7 @@ static t_val	*init_struct(int size, char **argv)
 	val.size_b = 0;
 	val.nb_operation = 0;
 	val.print_output = 0;
+	init_bonus_arg(&val, size, argv);
 	return (&val);
 }
 
@@ -89,7 +117,7 @@ t_val			*init_param(int argc, char **argv)
 		if ((error = (is_valid_arg(tab[i]))))
 		{
 			print_error(error == 1 ? "Error : Non numeric character found\n" :
-			"Error : Number invalid, > to INTMAX\n", 1);
+			"Error : Number invalid, > to INTMAX or < to INTMIN\n", 1);
 			return (free_tab(tab, NULL));
 		}
 		++i;

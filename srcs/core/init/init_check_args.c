@@ -6,17 +6,39 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 15:14:38 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:37:05 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:33:30 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
+
+int		is_bonus_flag(const char *str)
+{
+	char	*flags[5];
+	int		i;
+
+	flags[0] = "-c";
+	flags[1] = "-v";
+	flags[2] = "-t";
+	flags[3] = "-b";
+	flags[4] = NULL;
+	i = 0;
+	while (flags[i])
+	{
+		if (!(ft_strcmp(str, flags[i])))
+			return (0);
+		++i;
+	}
+	return (1);
+}
 
 int		is_valid_arg(const char *str)
 {
 	int i;
 
 	i = 0;
+	if (!(is_bonus_flag(str)))
+		return (0);
 	if (str[0] == '-' || str[0] == '+')
 		++i;
 	if (!str[i])
@@ -30,7 +52,8 @@ int		is_valid_arg(const char *str)
 			++i;
 		}
 	}
-	if ((unsigned long long)ft_atoi(str) > 2147483647)
+	if (ft_atoull(str) < -2147483648 || ft_atoull(str) > 2147483647
+	|| ft_strlen(str) > 11)
 		return (2);
 	return (0);
 }

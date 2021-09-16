@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 14:55:53 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:28:18 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:25:07 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ static int	step_01(t_val *val, int median)
 	int max_size;
 	int i;
 
-	max_size = ft_tablen(val->a);
+	max_size = val->size_a;
 	i = 0;
 	while (i < max_size)
 	{
-		if (!(has_number_inferior_median(val->a, median)))
+		if (!(has_number_inferior_median(val->a, median, val->size_a)))
 			break ;
 		if (val->a[0] < median)
-			pb(val);
+			pb(val, TRUE);
 		else
-			ra(val);
+			ra(val, TRUE);
 		++i;
 	}
 	return (0);
@@ -59,17 +59,15 @@ static int	step_01(t_val *val, int median)
 
 int			step_02(t_val *val)
 {
-	int l_median;
 	int max_size;
 	int i;
 	int nb_top_nbr;
 	int default_size;
 
-	default_size = ft_tablen(val->a);
-	max_size = ft_tablen(val->b);
+	default_size = val->size_a;
+	max_size = val->size_b;
 	i = 0;
 	nb_top_nbr = 0;
-	l_median = get_heap_median(ft_select_sort(val->b));
 	while (i < max_size)
 	{
 		step_02_loop(val, &nb_top_nbr);
@@ -83,11 +81,14 @@ int			step_02(t_val *val)
 
 int			algo_03(t_val *val)
 {
-	int m;
+	int		m;
+	int		*tab;
 
 	while (heap_solved(val))
 	{
-		m = get_heap_median(ft_select_sort(val->a));
+		tab = ft_select_sort(val->a, val->size_a);
+		m = get_heap_median(tab, val->size_a);
+		free(tab);
 		step_01(val, m);
 		step_02(val);
 	}

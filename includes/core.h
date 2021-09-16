@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 22:11:04 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:15:15 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/26 13:13:23 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,24 @@
 ** # include <string.h>
 */
 
-# define DEBUG_TIME_TO_WAIT 100000
+/*
+** Bonus Headers
+*/
+
+# include <sys/ioctl.h>
+# include <termcap.h>
+
+# define DEBUG_TIME_TO_WAIT 50000
+# define UINT size_t
+
+typedef	int	t_bool;
+# define TRUE 1
+# define FALSE 0
+
+/*
+** Idees bonus, 	-t : time ms
+** 					-b : type d'affichage, bar ou nombres
+*/
 
 /*
 ** COLORS
@@ -30,11 +47,11 @@
 # define NORMAL "\e[0m"
 # define BOLD "\e[1m"
 
-# define RED "\e[31m"
-# define GREEN "\e[32m"
-# define YELLOW "\e[33m"
-# define BLUE "\e[34m"
-# define CYAN "\e[36m"
+# define RED "\e[1;31m"
+# define GREEN "\e[1;32m"
+# define YELLOW "\e[1;33m"
+# define BLUE "\e[1;34m"
+# define CYAN "\e[1;36m"
 
 typedef struct	s_val
 {
@@ -46,6 +63,7 @@ typedef struct	s_val
 	int			print_output;
 	int			bonus_visualize;
 	int			bonus_last_change;
+	int			display_bar;
 
 	int			nb_operation;
 }				t_val;
@@ -56,9 +74,9 @@ typedef struct	s_val
 ** Swap les 2 premières valeurs des piles
 */
 
-int				sa(t_val *val);
-int				sb(t_val *val);
-int				ss(t_val *val);
+int				sa(t_val *val, t_bool print_output);
+int				sb(t_val *val, t_bool print_output);
+int				ss(t_val *val, t_bool print_output);
 
 /*
 ** PUSH
@@ -66,8 +84,8 @@ int				ss(t_val *val);
 ** Push first value to top of a or top of b
 */
 
-int				pa(t_val *val);
-int				pb(t_val *val);
+int				pa(t_val *val, t_bool print_output);
+int				pb(t_val *val, t_bool print_output);
 
 /*
 ** ROTATE
@@ -76,9 +94,9 @@ int				pb(t_val *val);
 ** Le premier élément devient le dernier
 */
 
-int				ra(t_val *val);
-int				rb(t_val *val);
-int				rr(t_val *val);
+int				ra(t_val *val, t_bool print_output);
+int				rb(t_val *val, t_bool print_output);
+int				rr(t_val *val, t_bool print_output);
 
 /*
 ** REVERSE ROTATE
@@ -87,9 +105,9 @@ int				rr(t_val *val);
 ** le dernier élément devient le premier
 */
 
-int				rra(t_val *val);
-int				rrb(t_val *val);
-int				rrr(t_val *val);
+int				rra(t_val *val, t_bool print_output);
+int				rrb(t_val *val, t_bool print_output);
+int				rrr(t_val *val, t_bool print_output);
 
 /*
 ** Init
@@ -113,10 +131,12 @@ int				heap_solved(t_val *val);
 int				ft_isdigit(int c);
 char			**parse_arg(int argc, char **argv);
 char			*ft_strdup(const char *s1);
-void			print_output(t_val *val, const char *str);
+void			print_output(t_val *val, const char *str, t_bool print);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(const char *str, int fd);
+char			*ft_itoa(int n);
+long long		ft_atoull(const char *str);
 
 /*
 ** TAB Utils
@@ -126,22 +146,14 @@ int				*ft_move_tab_down(int *tab, size_t *size);
 int				*ft_move_tab_up(int *tab, size_t *size);
 size_t			ft_tablen(const int *str);
 size_t			ft_ctablen(char **tab);
-int				*ft_realloc_int(int *tab, int new_size);
+int				*ft_realloc_int(int *tab, int new_size, int size);
 size_t			ft_fulltablen(char **tab);
 void			print_tab(char **tab);
-
-/*
-** DEBUG
-*/
-
-void			print_heap(int *h, size_t size);
-void			print_heaps(t_val *val);
-void			update_visualisation(t_val *val);
 
 /*
 ** SORT
 */
 
-int				*ft_select_sort(int *nbr);
+int				*ft_select_sort(int *nbr, size_t size);
 
 #endif

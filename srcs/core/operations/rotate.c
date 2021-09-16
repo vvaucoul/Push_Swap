@@ -6,13 +6,13 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 10:21:11 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 15:19:04 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 12:10:18 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/core.h"
 
-int	ra(t_val *val)
+int	ra(t_val *val, t_bool print)
 {
 	int tmp;
 
@@ -22,11 +22,11 @@ int	ra(t_val *val)
 	ft_move_tab_up(val->a, &val->size_a);
 	val->a[val->size_a] = tmp;
 	++val->size_a;
-	print_output(val, "ra");
+	print_output(val, "ra", print);
 	return (0);
 }
 
-int	rb(t_val *val)
+int	rb(t_val *val, t_bool print)
 {
 	int tmp;
 
@@ -36,14 +36,28 @@ int	rb(t_val *val)
 	ft_move_tab_up(val->b, &val->size_b);
 	val->b[val->size_b] = tmp;
 	++val->size_b;
-	print_output(val, "rb");
+	print_output(val, "rb", print);
 	return (0);
 }
 
-int	rr(t_val *val)
+int	rr(t_val *val, t_bool print)
 {
-	ra(val);
-	rb(val);
-	--val->nb_operation;
+	int tmp;
+
+	if (val->size_a > 1)
+	{
+		tmp = val->a[0];
+		ft_move_tab_up(val->a, &val->size_a);
+		val->a[val->size_a] = tmp;
+		++val->size_a;
+	}
+	if (val->size_b > 1)
+	{
+		tmp = val->b[0];
+		ft_move_tab_up(val->b, &val->size_b);
+		val->b[val->size_b] = tmp;
+		++val->size_b;
+	}
+	print_output(val, "rr", print);
 	return (0);
 }

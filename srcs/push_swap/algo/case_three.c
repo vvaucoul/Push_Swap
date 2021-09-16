@@ -6,7 +6,7 @@
 /*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 14:04:37 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/19 14:21:27 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2021/03/24 11:33:23 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,20 @@ int			case_three(t_val *val)
 	if (i == 0)
 		return (0);
 	if (i == 1)
-		sa(val);
+		sa(val, TRUE);
 	if (i == 2)
 	{
-		sa(val);
-		rra(val);
+		sa(val, TRUE);
+		rra(val, TRUE);
 	}
 	if (i == 3)
 	{
-		sa(val);
-		ra(val);
+		sa(val, TRUE);
+		ra(val, TRUE);
 	}
 	if (i == 4)
-		rra(val);
+		rra(val, TRUE);
 	if (i == 5)
-		ra(val);
+		ra(val, TRUE);
 	return (0);
 }
