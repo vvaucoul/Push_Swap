@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   generate_random_numbers.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 13:18:04 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/03/20 20:24:00 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:58:11 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <time.h>
 #include "../includes/core.h"
 
-int				add_nbr(int *nbr, int new_nbr)
+int add_nbr(int *nbr, int new_nbr)
 {
-	static int	index = 0;
-	int			i;
+	static int index = 0;
+	int i;
 
 	i = 0;
 	while (i < index)
@@ -31,23 +31,24 @@ int				add_nbr(int *nbr, int new_nbr)
 	return (0);
 }
 
-static int		init(int argc, char const *argv[])
+static int init(int argc, char const *argv[])
 {
 	if (argc != 4)
 	{
 		write(1, "Usage :\t[1] - Nb numbers \
-		\n\t[2] - Min Value\n\t[3] - Max Value\n", 64);
+		\n\t[2] - Min Value\n\t[3] - Max Value\n",
+			  63);
 		return (-1);
 	}
 	if (ft_atoi(argv[3]) - ft_atoi(argv[2]) < ft_atoi(argv[1]))
 	{
-		write(1, "- Your numbers can't be < to NB numbers\n", 48);
+		write(1, "- Your numbers can't be < to NB numbers\n", 41);
 		return (-1);
 	}
 	return (0);
 }
 
-static int		init_prg(int *min, int *max, int *rnbr, char const *argv[])
+static int init_prg(int *min, int *max, int *rnbr, char const *argv[])
 {
 	*min = atoi(argv[2]);
 	*max = atoi(argv[3]);
@@ -55,13 +56,13 @@ static int		init_prg(int *min, int *max, int *rnbr, char const *argv[])
 	return (0);
 }
 
-int				main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
-	int		*nbr;
-	size_t	i;
-	int		min;
-	int		max;
-	int		rnbr;
+	int *nbr;
+	size_t i;
+	int min;
+	int max;
+	int rnbr;
 
 	if ((init(argc, argv)))
 		return (-1);

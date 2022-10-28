@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+         #
+#    By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/03 22:02:22 by vvaucoul          #+#    #+#              #
-#    Updated: 2021/03/26 14:06:56 by vvaucoul         ###   ########.fr        #
+#    Updated: 2022/10/28 17:53:34 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,26 +99,26 @@ all:	$(NAMES)
 	@$(CCO) $@ $< -c
 
 $(NAMEC): $(OBJC)
-	@echo "\033[0;34mmaking checker\033[0m"
+	@printf "\033[0;34mmaking checker\033[0m\n"
 	@$(CCO) $(NAMEC) $(OBJC)
 
 $(NAMEPS): $(OBJPS)
-	@echo "\033[0;35mmaking push_swap\033[0m"
+	@printf "\033[0;35mmaking push_swap\033[0m\n"
 	@$(CCO) $(NAMEPS) $(OBJPS)
 
 $(NAMER): $(OBJR)
-	@echo "\033[0;34mmaking Random NBR\033[0m"
+	@printf "\033[0;34mmaking Random NBR\033[0m\n"
 	@$(CCO) $(NAMER) $(OBJR)
 
 clean:
 	@rm -f $(OBJC) $(OBJPS) $(OBJR)
-	@echo "\033[0;31mCleaning object files \033[0m"
+	@printf "\033[0;31mCleaning object files \033[0m\n"
 	@rm -f $(TRASH)
-	@echo "\033[1;33mCleaning the trash\033[0m"
+	@printf "\033[1;33mCleaning the trash\033[0m\n"
 
 fclean: clean
 	@rm -f $(NAMES) $(NAMER)
-	@echo "\033[0;32mClearing executables\033[0m"
+	@printf "\033[0;32mClearing executables\033[0m\n"
 
 random: $(NAMER)
 
